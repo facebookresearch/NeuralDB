@@ -1,0 +1,463 @@
+360Networks Inc.
+3DLabs Inc. Ltd.
+724 Solutions Inc.
+A B Electrolux
+A B SKF
+A B Volvo
+A R T International Inc.
+A.O. Tatneft
+ABB Ltd.
+Abbey National plc
+Aber Diamond Ltd.
+Abitibi Consolidated Inc.
+ABN Amro Holding N.V.
+Acambis plc
+Accelio Corp.
+Acetex Corp.
+Achieva Development Corp.
+Acindar Industria Argentina de Aceros S.A.
+ACLN Ltd.
+ACS-Tech 80 Ltd.
+ActFit.com Inc.
+ActivCard S.A.
+Active Assets & Associates Inc.
+ADB Systems International Inc.
+Adecco S.A.
+Adrian Resources Ltd.
+Advance Agro Public Co. Ltd.
+Advanced Semiconductor Engineering, Inc.
+Advantest Corp.
+AdvantExcel.com Communications Corp.
+AEGON N.V.
+Aerco Ltd.
+AES Drax Holdings Ltd.
+AES Drax Power Finance Holdings Ltd.
+Aeterna Laboratories Inc.
+Agnico-Eagle Mines Ltd.
+Agrium Inc.
+AimGlobal Technologies Co. Inc.
+Ainsworth Lumber Co. Ltd.
+Air Canada
+Akzo Nobel N.V.
+Aladdin Knowledge Systems Ltd.
+Alberta Energy Co. Ltd.
+Alcan Inc.
+Alcatel
+Alestra, S de R.L. de C.V.
+Alfa Laval Special Finance AB
+Algoma Steel Inc.
+Alliance Atlantis Communications Corp.
+Allianz Aktiengesellschaft
+Allied Irish Banks plc
+Allura International Inc.
+Almaden Resource Corp.
+Alstom
+Altair International, Inc.
+Altarex Corp.
+Alto Palermo S.A.
+Aluminum Corp of China Ltd.
+Alvarion Ltd.
+Amarin Corp plc
+Amatek Industries Pty Ltd.
+Amcor Ltd.
+Amdocs Ltd.
+America Mineral Fields Inc.
+America Movil, S.A. de C.V.
+American Israeli Paper Mills Ltd.
+Amersham plc
+Amvescap plc
+Amway Japan Ltd.
+Anangel-American Shipholdings Ltd.
+Anchor Lamina, Inc.
+Angiotech Pharmaceuticals, Inc.
+Anglo Swiss Resources Inc.
+Anglogold Ltd.
+Anooraq Resources Corp.
+Antenna TV S.A.
+Anthony Clark International Insurance Brokers Inc.
+API Electronics Group Inc.
+Apiva.com Web Corp.
+APT Satellite Holdings Ltd.
+Aracruz Celulose S.A.
+Aramex International Ltd.
+ARC Energy Trust
+Arcadis N.V.
+Arch Capital Group Ltd.
+Archangel Diamond Co.
+Arel Communications & Software Ltd.
+Argosy Minerals Inc.
+Ariel Resources Ltd.
+Arm Holdings plc
+Art Advanced Research Technologies Inc.
+Aryt Industries Ltd.
+ASAT Holdings Ltd.
+ASE Test Ltd.
+Ashanti Goldfields Co. Ltd.
+Pulp & Paper Co. Ltd.
+Satellite Telecommunications Holdings Ltd.
+Asiacontent.com Ltd.
+ASM International N.V.
+ASML Holding N.V.
+Aspen Group Resources Corp.
+AstraZeneca plc
+Astris Energi Inc.
+AT Plastics Inc.
+AT&T Canada Inc.
+ATI Technologies Inc.
+Atlantic Caspian Resources plc
+Atlantic Telecom Group plc
+Atlas Pacific Ltd.
+ATNA Resources Ltd.
+Attunity Ltd.
+Audiocodes Ltd.
+Aurizon Mines Ltd.
+Aurora Metals BVI Ltd.
+Australia & New Zealand Banking Group Ltd.
+Autonomy Corp plc
+Avecia Group plc
+Aventis
+AXA
+Axcan Pharma Inc.
+Ayotte Music Inc.
+Azteca Holdings, S.A. de C.V.
+Aztek Technologies Inc.
+B & H Ocean Carriers Ltd.
+Bakbone Software Inc.
+Balaton Power Inc.
+Ballard Power Systems Inc.
+Baltimore Technologies plc
+Banco Bilboa Vizcaya Argentaria S.A.
+Banco Bradesco S.A.
+Banco Comercial Portugues S.A.
+Banco de A. Edwards
+Banco de Chile
+Banco Espirito Santo e Comercial de Lisboa S.A.
+Banco Rio de la Plata S.A.
+Banco Santander - Chile
+Banco Santander Central Hispano S.A.
+Banco Santiago
+Banco Totta & Acores S.A.
+BanColombia S.A.
+Bank of Montreal
+Barak I.T.C. (1995) - International Telecommunications Services Corp.
+Barbeques Galore Ltd.
+Barclays Bank plc
+Barclays plc
+Barrick Gold Corp.
+BASF Aktiengesellschaft
+Battery Technologies Inc.
+Baytex Energy Ltd.
+BBVA Banco BHIF
+BBVA Banco Frances S.A.
+BCE Inc.
+BCI Telecom Holding Inc.
+BE Semiconductor Industries N.V.
+Beijing Yanhua Petrochemical Co. Ltd.
+Bell Canada
+Belmont Resources, Inc.
+Belzberg Technologies Inc.
+Bema Gold Corp.
+Benetton Group S.p.A.
+Benguet
+Bennett Environmental Inc.
+Berkley Resources Inc.
+Bestel S.A. de C.V.
+BG Group plc
+BHP Billiton Ltd.
+Biacore International AB
+Big Rock Brewery Ltd.
+Bioforest Pacific Inc.
+Biomira Inc.
+Biora AB
+Biovail Corporation
+Birch Mountain Resources Ltd.
+Blue Square - Israel Ltd.
+Boardwalk Equities Inc.
+BOC Group plc
+Bonso Electronics International Inc.
+Bookham Technology plc
+BOS Better Online Solutions Ltd.
+Bouygues Offshore S.A.
+BP plc
+Bracknell Corp.
+Bradner Ventures Ltd.
+Brandera.com Inc.
+Brascan Corp.
+Brasil Telecom Participacoes S.A.
+Brasil Telecom S.A.
+Bravo Resource Partners Ltd.
+Breakwater Resources Ltd.
+Brilliance China Automotive Holdings Ltd.
+British Airways plc
+British Biotech plc
+British Energy plc
+British Sky Broadcasting Group plc
+Brocker Technology Group Ltd.
+Brokat Aktiengesellschaft
+Brookfield Properties Corp.
+BT Group plc
+Buenos Aires Embotelladora S.A.-BAESA
+Buffalo Diamonds Ltd.
+Buhrmann N.V.
+Bunge Ltd.
+Bunzl plc
+BVR Systems Ltd.
+BVR Technologies Ltd.
+Cable and Wireless plc
+Cable Satisfaction International Inc.
+Cabletel Communications Corp.
+Cableuropa, S.A.
+Cablevision S.A.
+Cadbury Schweppes plc
+Cade Struktur Corp.
+Calais Resources Inc.
+CalciTech Ltd.
+Caledonia Mining Corp.
+California Exploration Ltd.
+Call Net Enterprises Inc.
+Callahan Nordheim-Westfalen GmbH
+Cambior Inc.
+Cambridge Antibody Technology Group plc
+Cameco Co.
+Camflo Resources Ltd.
+Campbell Resources Inc.
+Camtek Ltd.
+Camuzzi Gas del Sur S.A.
+Camuzzi Gas Pampeana S.A.
+Canada Life Financial Corp.
+Canada Southern Petroleum Ltd.
+Canadian 88 Energy Corp.
+Canadian Imperial Bank of Commerce
+Canadian National Railway Ltd.
+Canadian Natural Resources Ltd.
+Canadian Pacific Railway Ltd.
+Canadian Zinc Corp.
+Canalaska Ventures Ltd.
+Canarc Resources Corp.
+Canon Inc.
+CanWest Global Communications Co.
+Canwest Media Inc.
+Capital Environmental Resource Inc.
+Carlisle Holdings Ltd.
+Carlton Communications plc
+Carmanah Technologies Corp.
+Carmel Container Systems Ltd.
+CBX Ventures, Inc.
+CE Franklin Ltd.
+Cedara Software Corp.
+Celanese AG
+Celestica Inc.
+Celltech Group plc
+Celulosa Arauco y Constitucion S.A.
+Cemex, S.A. de C.V.
+Cenargo International plc
+Cenes Pharmaceuticals plc
+Central Fund of Canada Ltd.
+Central Minera Corp.
+Centurion Energy International Inc.
+Ceragon Networks Ltd.
+Certicom Corp.
+Ceyoniq AG
+Cez, A.S.
+CFM Majestic Inc.
+CGI Group Inc.
+CGU Group Canada Ltd.
+Chai-Na-Ta Corp.
+Chartered Semiconductor Manufacturing Ltd.
+Chartwell Technology Inc.
+CHC Helicopter Corp.
+Check Point Software Technologies Ltd.
+China Convergent Corp. Ltd.
+China Eastern Airlines Corp. Ltd.
+China Enterprises Ltd.
+China Mobile (Hong Kong) Ltd.
+China Petroleum & Chemical Corp. (Sinopec)
+China Southern Airlines Corp. Ltd.
+China Unicom Ltd.
+China Yuchai International Ltd.
+Chinadotcom Corp.
+Chipmos Technologies (Bermuda) Ltd.
+Ciba Speciality Chemicals Holding Inc.
+Cimatron Ltd.
+Cinema Internet Networks Inc.
+Cinram International Ltd.
+Citadel Gold Mines Inc.
+City Telecom (H.K.) Ltd.
+CityView Corp Ltd.
+Claxson Interactive Group plc
+Clearly Canadian Beverage Corp.
+Clearwave N.V.
+Clondalkin Industries plc
+CLP Power Hong Kong Ltd.
+Clubhaus plc
+CNH Global N.V.
+CNOOC Ltd.
+Coca-Cola Embonor S.A.
+Coca-Cola Femsa S.A. de C.V.
+Cognicase Inc.
+Cognos Inc.
+Coles Myer Ltd.
+Colt Telecom Group plc
+Commercial Consolidators Corp.
+Commonwealth Bank of Australia
+Commtouch Software Ltd.
+Compagnie Generale de Geophysique
+Companhia Brasileira de Distribuicao
+Companhia de Alimentos Fargo
+Companhia de Bedidas das Americas - AMBEV
+Companhia Energetica de Minas Gerais - CEMIG
+Companhia Parananse de Energia - Copel
+Companhia Siderurgica Nacional
+Companhia Vale de Rio Doce S.A.
+Compania Anonima Nacional Telefonos de Venezuela S.A.
+Compania Cervecerias Unidas S.A.
+Compania de Minas Buenaventura S.A.
+Compania de Telecomunicaciones de Chile S.A.
+Compania Internacional de Telecomunicaciones S.A.
+Compugen Ltd.
+Comunicacion Celular S.A.
+Concordia Bus AB
+Coniagas Resources Ltd
+Conoco Canada Resources Ltd.
+Consolidated Envirowaste Industries Inc.
+Consolidated Mercantile Inc.
+Consolidated Trillion Resources Ltd.
+Consolidated Water Co. Ltd.
+Consortium G Dina Group S.A. de C.V.
+Consumers Packaging Inc.
+Continental Energy Corp
+Controladora Comercial Mexicana S.A. de C.V.
+Converium Holding AG
+Cookson Group plc
+Coolbrands International Inc.
+Copamex Industries, S.A. de C.V.
+Copene - Petroquimica do Nordeste S.A.
+Coral Gold Corp.
+Coral Group plc
+Cordiant Communications Group plc
+Corel Corp.
+Corimon C.A.
+Corus Entertainment Inc.
+Corus Group plc
+Cott Corp.
+Counsel Corp.
+CP Ships Ltd.
+Crayfish Co. Ltd.
+Cream Minerals Ltd.
+Creative Technology Ltd.
+Creator Capital Ltd.
+Credicorp
+Credit Suisse Group
+Creo Products Inc.
+Cresud Sacif
+Crew Development Corp.
+CRH plc
+Cristalerias de Chile S.A.
+Crosswave Communications Inc.
+Crow Technologies 1977 Ltd.
+Crucell N.V.
+Cryopack Industries Inc.
+Cryptologic Inc.
+Crystal Graphite Corp.
+Crystal Systems Solutions Ltd.
+Crystallex International Corp.
+CSR Ltd.
+CTI Holdings S.A.
+Cumberland Resources Ltd.
+Current Technology Corp.
+Cusac Gold Mines Ltd.
+D G Jewelry of Canada Inc.
+DaimlerChrysler AG
+Dassault Systems S.A.
+Datalex plc
+Datamirror Corp.
+Datawave Systems Inc.
+Daugherty Resources Inc.
+Dayton Mining Co.
+De Rigo S.p.A.
+Dealcheck.com Inc.
+Decoma International Inc.
+Dectron Internationale Inc.
+Delano Technology Corp.
+Delta Galil Industries Ltd.
+Derek Resources Corp.
+Derlan Manufacturing Inc.
+Desc S.A. de C.V.
+Descartes Systems Group Inc.
+Deswell Industries Inc.
+Deutsche Bank Aktiengesellschaft
+Deutsche Telekom AG
+DF China Technology Inc.
+Diageo plc
+Dialog Semiconductor plc
+Digital Star Inc.
+Digitale Telekabel AG
+Disco S.A.
+Distribucion y Servicio D&S S.A.
+Diversinet Inc.
+Dolphin Telecom plc
+Doman Industries Ltd.
+Domtar Inc.
+Donner Minerals Ltd.
+Dorel Industries Inc.
+Dr. Reddy's Laboratories Ltd.
+Draxis Health Inc.
+DSG International Ltd.
+Ducati Motor Holdings S.p.A.
+Dundee Bancorp Inc.
+Durban Roodepoort Deep Ltd.
+Dynacare Inc.
+Dynamic Digital Depth Inc.
+Dynamic Oil & Gas Ltd.
+DynaMotive Energy Systems Corp.
+Dynea International Oy
+E*Comnetrix Inc.
+E.ON AG
+Ebookers.com plc
+Echo Bay Mines Ltd.
+ECI Telecommunications Ltd.
+Ectel Ltd.
+EDAP TMS S.A.
+E-digital Corp.
+EDP - Electricidade de Portugal S.A.
+Eganagoldpfeil (Holdings) Ltd.
+Eidos plc
+Eiger Technology Inc.
+Eimo Oyj
+Ek Chor China Motorcycle Company Ltd.
+Ekabel Hessen GmbH
+Eksportfinans A/S
+Elan Corp plc
+Elbit Ltd.
+Elbit Medical Imaging Ltd.
+Elbit Systems Ltd.
+Elbit Vision Systems Ltd.
+Electrochemical Industries 1952 Ltd.
+Elephant & Castle Group, Inc.
+Eletson Holdings Inc.
+Elron Electronic Industries Ltd.
+Elscint Ltd.
+Elsevier N.V.
+Eltek Ltd.
+Embotelladora Andina S.A.
+Embraer-Empresa Brasileira de Aeronautica S.A.
+Embratel Participacoes S.A.
+Emco Ltd.
+Empresa Electrica Pehuenche S.A.
+Empresa Nacional de Electricidad S.A. - Endesa
+Empresas ICA Sociedad Controladora S.A.
+Enbridge Inc.
+Endesa S.A.
+Enel S.p.A.
+Energis plc
+Energy Power Systems Ltd.
+Enerplus Resources Fund
+Enersis S.A.
+Engel General Developers Ltd.
+ENI S.p.A.
+Enitel ASA
+Enodis plc
+Enterprise Oil plc
+Enterra Energy Corp.
+Envoy Communications Group, Inc.
+EPCOS AG

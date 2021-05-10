@@ -1,0 +1,2686 @@
+{
+    "P26": {
+        "fact": [
+            "$s is $o's partner",
+            "$s is $o's spouse",
+            "$s is married to $o",
+            "$s has spouse $o",
+            "$o is $s's partner",
+            "$o is $s's spouse",
+            "$o is married to $s",
+            "$o has spouse $s"
+        ],
+        "bool": [
+            [
+                "Is $s $o's partner?",
+                "TRUE"
+            ],
+            [
+                "Is $s partner of $o?",
+                "TRUE"
+            ],
+            [
+                "Is $s $o's spouse?",
+                "TRUE"
+            ],
+            [
+                "Is $o $s's partner?",
+                "TRUE"
+            ],
+            [
+                "Is $o partner of $s?",
+                "TRUE"
+            ],
+            [
+                "Is $o $s's spouse?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "List who $s is married to",
+                "$o"
+            ],
+            [
+                "Who is $s's spouse?",
+                "$o"
+            ],
+            [
+                "Who is $s married to?",
+                "$o"
+            ],
+            [
+                "Who married $s?",
+                "$o"
+            ],
+            [
+                "Who are $s's spouses?",
+                "$o"
+            ],
+            [
+                "List the spouses of $s",
+                "$o"
+            ],
+            [
+                "List the partners of $s",
+                "$o"
+            ],
+            [
+                "Who is the spouse of $s?",
+                "$o"
+            ],
+            [
+                "List who $o is married to",
+                "$s"
+            ],
+            [
+                "Who is $o's spouse?",
+                "$s"
+            ],
+            [
+                "Who is $o married to?",
+                "$s"
+            ],
+            [
+                "Who married $o?",
+                "$s"
+            ],
+            [
+                "Who are $o's spouses?",
+                "$s"
+            ],
+            [
+                "List the spouses of $o",
+                "$s"
+            ],
+            [
+                "List the partners of $o",
+                "$s"
+            ],
+            [
+                "Who is the spouse of $o?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many partners does $s have?",
+                "$o"
+            ],
+            [
+                "How many people did $s marry?",
+                "$o"
+            ],
+            [
+                "How many partners has $s had?",
+                "$o"
+            ],
+            [
+                "How many partners does $o have?",
+                "$s"
+            ],
+            [
+                "How many people did $o marry?",
+                "$s"
+            ],
+            [
+                "How many partners has $o had?",
+                "$s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P27": {
+        "fact": [
+            "$s is a citizen of $o",
+            "$o recognizes $s as its citizen.",
+            "$s has the citizenship of $o",
+            "$s has the nationality of $o"
+        ],
+        "bool": [
+            [
+                "Is $s a citizen of $o?",
+                "TRUE"
+            ],
+            [
+                "Does $s have the nationality of $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Who are the citizens of $o?",
+                "$s"
+            ],
+            [
+                "What is the nationality of $s?",
+                "$o"
+            ],
+            [
+                "Who has citizenship of $o?",
+                "$s"
+            ],
+            [
+                "What are the nationalities of $s?",
+                "$o"
+            ],
+            [
+                "Who are the nationals of $o?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many inhabitants are there in $o?",
+                "$s"
+            ],
+            [
+                "How many nationalities does $s have?",
+                "$o"
+            ],
+            [
+                "How many nationals does $o have?",
+                "$s"
+            ],
+            [
+                "How many citizens does $o have?",
+                "$s"
+            ]
+        ],
+        "argmin": [
+            [
+                "Which country has the fewest number of citizens?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which country has the lowest number of nationals?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "Which country has the highest number of nationals?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which country has the largest number of citizens?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P19": {
+        "fact": [
+            "$s was born in $o",
+            "$o is the place of birth of $s",
+            "$o is where $s was born"
+        ],
+        "bool": [
+            [
+                "Was $o the birthplace of $s?",
+                "TRUE"
+            ],
+            [
+                "Is $o the place of birth of $s?",
+                "TRUE"
+            ],
+            [
+                "Is $o where $s was born?",
+                "TRUE"
+            ],
+            [
+                "Was $s born in $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Who is from $o?",
+                "$s"
+            ],
+            [
+                "List everyone born in $o",
+                "$s"
+            ],
+            [
+                "Where is $s from?",
+                "$o"
+            ],
+            [
+                "Who was born in $o?",
+                "$s"
+            ],
+            [
+                "Where was $s born?",
+                "$o"
+            ],
+            [
+                "List people born in $o",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many people were born in $o?",
+                "$s"
+            ],
+            [
+                "Count the number of people born in $o",
+                "$s"
+            ]
+        ],
+        "argmin": [
+            [
+                "What is the place with the least number of births?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which place is the birthplace of the fewest people?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is the place with the fewest number of births?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which place had the least people born there?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "What place has the most people born there?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is the place with the most births?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is the place with the highest number of births?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which places has had the highest number of births?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which place is the birthplace of the most people?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P106": {
+        "fact": [
+            "$s's job is a $o",
+            "$s works as a $o",
+            "$s is a $o"
+        ],
+        "bool": [
+            [
+                "Does $s work as an $o?",
+                "TRUE"
+            ],
+            [
+                "Is $s an $o?",
+                "TRUE"
+            ],
+            [
+                "Is $s's job a $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Who has a career as a $o?",
+                "$s"
+            ],
+            [
+                "Who works as a $o?",
+                "$s"
+            ],
+            [
+                "What is $s's job?",
+                "$o"
+            ],
+            [
+                "What are $s's jobs?",
+                "$o"
+            ],
+            [
+                "Who is a $o?",
+                "$s"
+            ],
+            [
+                "What does $s do?",
+                "$o"
+            ],
+            [
+                "What jobs does $s have?",
+                "$o"
+            ]
+        ],
+        "count": [
+            [
+                "How many people are $o?",
+                "$s"
+            ],
+            [
+                "How many jobs has $s had?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "Who has had the least number of jobs?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who has had the fewest jobs?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the least popular job?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What job has the fewest number of people working there?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "Who has had the most jobs?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who has had the highest number of jobs?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What job has had the highest number of people working there?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is the most popular job?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P20": {
+        "fact": [
+            "$s died in $o",
+            "The place of death for $s was $o",
+            "$o is where $s died"
+        ],
+        "bool": [
+            [
+                "Is $o where $s died?",
+                "TRUE"
+            ],
+            [
+                "Is $o the place of death of $s?",
+                "TRUE"
+            ],
+            [
+                "Did $s die in $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Which people have died in $o?",
+                "$s"
+            ],
+            [
+                "Who died in $o?",
+                "$s"
+            ],
+            [
+                "Who has died in $o?",
+                "$s"
+            ],
+            [
+                "Where did $s die?",
+                "$o"
+            ]
+        ],
+        "count": [
+            [
+                "Count the number of people who have died in $o",
+                "$s"
+            ],
+            [
+                "How many people have died in $o?",
+                "$s"
+            ],
+            [
+                "How many people died in $o?",
+                "$s"
+            ]
+        ],
+        "argmin": [
+            [
+                "Which place has had the fewest people die there?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Where is the place where the fewest people have died?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which places have the fewest people die there?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "Where is the place where the most people have died?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which place has had the most people die there?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which places have the most people die there?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P35": {
+        "fact": [
+            "$s is the official with the highest formal authority in $o.",
+            "$s is head of state of $o."
+        ],
+        "bool": [
+            [
+                "Is $o's head of state $s?",
+                "TRUE"
+            ],
+            [
+                "Is $s head of state of $o?",
+                "TRUE"
+            ],
+            [
+                "Is $s the official with the highest formal authority in $o?",
+                "TRUE"
+            ],
+            [
+                "Is fhe official with the highest formal authority in $o $s?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Who rules over $o?",
+                "$s"
+            ],
+            [
+                "Who's the leader of $o?",
+                "$s"
+            ],
+            [
+                "List the heads of state of $o",
+                "$s"
+            ],
+            [
+                "Who's in charge of $o?",
+                "$s"
+            ],
+            [
+                "Where is $s the ruler?",
+                "$o"
+            ],
+            [
+                "List the leaders of $o?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many heads of states are in charge of $o?",
+                "$s"
+            ],
+            [
+                "How many countries is $s the ruler of?",
+                "$o"
+            ],
+            [
+                "How many countries is $s head of state of?",
+                "$o"
+            ],
+            [
+                "How many rulers does $o have?",
+                "$s"
+            ],
+            [
+                "How many countries does $s rule?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "Who rules over the fewest countries?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which country has had the fewest leaders?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who is head of state of the fewest places?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which country has the fewest leaders?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "Which country has had the most leaders?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which country has the most the leaders?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who is head of state of the most places?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who rules over the most countries?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P21": {
+        "fact": [
+            "$s is $o",
+            "The gender of $s is $o",
+            "$s is a $o"
+        ],
+        "bool": [
+            [
+                "Is $s $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Which people are $o?",
+                "$s"
+            ],
+            [
+                "Who is $o?",
+                "$s"
+            ],
+            [
+                "List everyone who is $o",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many people are $o?",
+                "$s"
+            ]
+        ],
+        "argmin": [
+            [
+                "What is the least popular gender?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which gender has the fewest people?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "What is the most popular gender?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which gender has the most people?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P23": {
+        "fact": [
+            "$o is the mother of $s",
+            "$s's mother is $o",
+            "$s is a parent of $o",
+            "$o is $s's mom",
+            "$o is a child of $s",
+            "$o is $s's mother",
+            "$o is $s's mum"
+        ],
+        "bool": [
+            [
+                "Is $o $s's mother?",
+                "TRUE"
+            ],
+            [
+                "Is $o $s's mum?",
+                "TRUE"
+            ],
+            [
+                "Is $o the mother of $s?",
+                "TRUE"
+            ],
+            [
+                "Is $o $s's mom?",
+                "TRUE"
+            ],
+            [
+                "Is $o a parent of $s?",
+                "TRUE"
+            ],
+            [
+                "Is $o $s's parent?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Who are $o's children?",
+                "$s"
+            ],
+            [
+                "Who are the children of $o?",
+                "$s"
+            ],
+            [
+                "Who is $s's mom?",
+                ""
+            ],
+            [
+                "Who is the mother of $s?",
+                "$o"
+            ],
+            [
+                "Who is $s's mum?",
+                ""
+            ],
+            [
+                "Who are the parents of $s?",
+                "$o"
+            ]
+        ],
+        "count": [
+            [
+                "How many children does $o have?",
+                "$s"
+            ],
+            [
+                "How many parents does $s have?",
+                "$o"
+            ],
+            [
+                "How many people are children of $o?",
+                "$s"
+            ]
+        ],
+        "argmin": [
+            [
+                "Who has the fewest children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has the least children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which parent has the fewest children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has the least kids?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which parent doesn't have many children?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "Who has the most children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which parent has the highest number of children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which parent has the most children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has the most kids?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P22": {
+        "fact": [
+            "$o is $s's father",
+            "$s's father is $o",
+            "$o is the father of $s",
+            "$s is a child of $o",
+            "$o is $s's dad",
+            "$o is a parent of $s"
+        ],
+        "bool": [
+            [
+                "Is $o $s's dad?",
+                "TRUE"
+            ],
+            [
+                "Is $o $s's father?",
+                "TRUE"
+            ],
+            [
+                "Is $o the father of $s?",
+                "TRUE"
+            ],
+            [
+                "Is $o a parent of $s?",
+                "TRUE"
+            ],
+            [
+                "Is $o $s's parent?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Who are $o's children?",
+                "$s"
+            ],
+            [
+                "Who is the father of $s?",
+                "$o"
+            ],
+            [
+                "Who are the parents of $s?",
+                "$o"
+            ],
+            [
+                "Who are the children of $o?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many children does $o have?",
+                "$s"
+            ],
+            [
+                "How many parents does $s have?",
+                "$o"
+            ],
+            [
+                "How many people are children of $o?",
+                "$s"
+            ]
+        ],
+        "argmin": [
+            [
+                "Who has the fewest children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has the least children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which parent has the fewest children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has the least kids?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which parent doesn't have many children?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "Who has the most children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which parent has the highest number of children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which parent has the most children?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has the most kids?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P1082": {
+        "fact": [
+            "There are $o inhabitants of $s",
+            "There are $o people living in $s",
+            "The population of $s is $o"
+        ],
+        "bool": [
+            [
+                "Are there $o inhabitants of $s?",
+                "TRUE"
+            ],
+            [
+                "Is the number of people living in $s $o?",
+                "TRUE"
+            ],
+            [
+                "Is the population of $s $o?",
+                "TRUE"
+            ],
+            [
+                "Are there $o people living in $s?",
+                "TRUE"
+            ]
+        ],
+        "count": [
+            [
+                "What is the population of $s?",
+                "$o"
+            ],
+            [
+                "How many people live in $s?",
+                "$o"
+            ]
+        ],
+        "min": [
+            [
+                "What is the lowest population?",
+                "$o"
+            ],
+            [
+                "What is the smallest population?",
+                "$o"
+            ]
+        ],
+        "max": [
+            [
+                "What is the highest population?",
+                "$o"
+            ],
+            [
+                "What is the largest population?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "What place has the fewest people living there?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which place has the smallest population?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the least inhabited place?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmax": [
+            [
+                "What place has the most people living there?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which place has the biggest population?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the most inhabited place?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P50": {
+        "fact": [
+            "$s's author is $o",
+            "$o is the author of $s",
+            "$o wrote $s",
+            "$s was written by $o"
+        ],
+        "bool": [
+            [
+                "Did $o write $s?",
+                "TRUE"
+            ],
+            [
+                "Is $o the author of $s?",
+                "TRUE"
+            ],
+            [
+                "Was $s written by $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "List all the authors of $s.",
+                "$o."
+            ],
+            [
+                "List all the books that $o is the author of.",
+                "$s"
+            ],
+            [
+                "Who are writers of $s?",
+                "$o."
+            ],
+            [
+                "What are the books written by $o?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many people wrote $s?",
+                "$o"
+            ],
+            [
+                "How many books did $s write?",
+                "$s"
+            ],
+            [
+                "How many books is $o the author of?",
+                "$s"
+            ],
+            [
+                "How many authors does $s have?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "Which author has written the least number of books?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who is author with the fewest number of books?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which book has the fewest number of authors?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmax": [
+            [
+                "Which author has written the largest number of books?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which book has the highest number of authors?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who is author with the maximum number of books?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P47": {
+        "fact": [
+            "$s is neighbour with $o.",
+            "$s shares a border with $o.",
+            "$s and $o share borders with each other.",
+            "$s is a neighbour of $o.",
+            "$s and $o are neighbours.",
+            "$o is neighbour with $s.",
+            "$o shares a border with $s.",
+            "$o and $s share borders with each other.",
+            "$o is a neighbour of $s.",
+            "$o and $s are neighbours."
+        ],
+        "bool": [
+            [
+                "Does $s share a border with $o?",
+                "TRUE"
+            ],
+            [
+                "Do $s and $o share borders?",
+                "TRUE"
+            ],
+            [
+                "Do $o and $s have common borders?",
+                "TRUE"
+            ],
+            [
+                "Are $s and $o neighbours?",
+                "TRUE"
+            ],
+            [
+                "Does $o share a border with $s?",
+                "TRUE"
+            ],
+            [
+                "Do $o and $s share borders?",
+                "TRUE"
+            ],
+            [
+                "Do $s and $o have common borders?",
+                "TRUE"
+            ],
+            [
+                "Are $o and $s neighbours?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Which places share a border with $s?",
+                "$o"
+            ],
+            [
+                "What places are next to $s?",
+                "$o"
+            ],
+            [
+                "Which places neighbour $s?",
+                "$o"
+            ],
+            [
+                "Which places share a border with $o?",
+                "$s"
+            ],
+            [
+                "What places are next to $o?",
+                "$s"
+            ],
+            [
+                "Which places neighbour $o?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many places border $s?",
+                "$o"
+            ],
+            [
+                "How many neighbours does $s have?",
+                "$o"
+            ],
+            [
+                "How many places share border with $s?",
+                "$o"
+            ],
+            [
+                "How many places border $o?",
+                "$s"
+            ],
+            [
+                "How many neighbours does $o have?",
+                "$s"
+            ],
+            [
+                "How many places share border with $o?",
+                "$s"
+            ]
+        ],
+        "argmin": [
+            [
+                "What is the place with the minimum number of borders?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which place has the lowest number of neighbours?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the place with the minimum number of borders?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which place has the lowest number of neighbours?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "Which place has the highest number of neighbours?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the place with the maximum number of borders?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which place has the highest number of neighbours?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is the place with the maximum number of borders?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P57": {
+        "fact": [
+            "$o is the director of $s",
+            "$o directed $s",
+            "$s's director is $o",
+            "$s is directed by $o"
+        ],
+        "bool": [
+            [
+                "Did $o direct $s?",
+                "TRUE"
+            ],
+            [
+                "Was $s directed by $o?",
+                "TRUE"
+            ],
+            [
+                "Is $o director of $s?",
+                "TRUE"
+            ],
+            [
+                "Was $o the director of $s?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Who are the directors of $s?",
+                "$o"
+            ],
+            [
+                "Which movies have been directed by $o?",
+                "$s"
+            ],
+            [
+                "Which movies has $o directed?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many movies has $o directed?",
+                "$s"
+            ],
+            [
+                "How many directors does $s have?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "Which director has directed minimum number of movies?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has directed minimum number of movies?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "Who has directed maximum number of movies?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which director has directed maximum number of movies?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P1867": {
+        "fact": [
+            "The size of the electorate in $s is $o",
+            "The number of eligible voters in $s was $o",
+            "There were $o registered voters in $s",
+            "There are $o registered voters in $s",
+            "$s has $o eligible voters",
+            "There are $o voters in $s",
+            "The number of eligible voters in $s is $o"
+        ],
+        "bool": [
+            [
+                "Does $s have $o eligible voters?",
+                "TRUE"
+            ],
+            [
+                "Does $s have $o voters?",
+                "TRUE"
+            ],
+            [
+                "Are there $o registered voters in $s?",
+                "TRUE"
+            ],
+            [
+                "Are there $o voters in $s?",
+                "TRUE"
+            ]
+        ],
+        "count": [
+            [
+                "How many registered voters are there in $s?",
+                "$o"
+            ],
+            [
+                "How many registered voters are there?",
+                "$o"
+            ]
+        ],
+        "min": [
+            [
+                "What is the smallest number of registered voters?",
+                "$o"
+            ],
+            [
+                "What is the lowest voter registration?",
+                "$o"
+            ]
+        ],
+        "max": [
+            [
+                "What is the largest number of voters?",
+                "$o"
+            ],
+            [
+                "What is the highest voter regitration?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "Which place has the fewest registered voters?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Where is the lowest number of registered voters?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What places have the lowest number of registered voters?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmax": [
+            [
+                "What places have the highest number of registered voters?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Where is the highest number of registered voters?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which place has the most registered voters?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P1092": {
+        "fact": [
+            "There are $o $s in existence ",
+            "There were $o $s made",
+            "$s was made $o times"
+        ],
+        "set": [
+            [
+                "What items are there?",
+                "$s"
+            ],
+            [
+                "List all items",
+                "$s"
+            ],
+            [
+                "What items exist?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many things were manufactured?",
+                "$o"
+            ],
+            [
+                "How many $s were manufactured?",
+                "$o"
+            ],
+            [
+                "How many $s are there?",
+                "$o"
+            ],
+            [
+                "How many $s exist?",
+                "$o"
+            ],
+            [
+                "How many items were made?",
+                "$o"
+            ]
+        ],
+        "min": [
+            [
+                "What was the smallest production run?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "max": [
+            [
+                "What was the largest production run?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmin": [
+            [
+                "What is the least common item?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the rarest item?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What item has been made the least?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the meast manufactured item?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmax": [
+            [
+                "What is the most manufactured item?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the most common item?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What item has been made the most?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the most abundant item?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P54": {
+        "fact": [
+            "$s is a member of $o",
+            "$o's membership includes $s",
+            "$s is a part of $o",
+            "$s plays for $o"
+        ],
+        "bool": [
+            [
+                "Is $s a member of $o?",
+                "TRUE"
+            ],
+            [
+                "Is $s part of $o?",
+                "TRUE"
+            ],
+            [
+                "Does $s play for $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "List teams $s plays for",
+                "$o"
+            ],
+            [
+                "Who is a member of $o?",
+                "$s"
+            ],
+            [
+                "Who plays for $o?",
+                "$s"
+            ],
+            [
+                "$s is a member of which teams?",
+                "$o"
+            ]
+        ],
+        "count": [
+            [
+                "How many people play for $o?",
+                "$s"
+            ],
+            [
+                "How many teams has $s played for?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "Which team has the fewest players?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has played for the least number of different teams?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the team with the fewest players?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is the smallest team?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has played for the fewest teams?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which team has the lowest number of players?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which team has the least players?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has played for the least teams?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmax": [
+            [
+                "What is the largest team?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which team has the highest number of players?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has played for the highest number of teams?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which team has the most players?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has played for the most teams?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who has played for the most number of teams?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the team with the most players?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is the team with the most number of players?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P69": {
+        "fact": [
+            "$s studied at $o",
+            "$s did their undergraduate at $o",
+            "One of the students at $o was $s",
+            "$s studied their undergraduate at $o",
+            "$s was a student at $o",
+            "$s studied their degree at $o",
+            "$s's alma mater is $o"
+        ],
+        "bool": [
+            [
+                "Did $s get their degree at $o?",
+                "TRUE"
+            ],
+            [
+                "Did $s study at $o?",
+                "TRUE"
+            ],
+            [
+                "Was $s studying at $o?",
+                "TRUE"
+            ],
+            [
+                "Did $s get his or her degree at $o?",
+                "TRUE"
+            ],
+            [
+                "Was $s a member of $o?",
+                "TRUE"
+            ],
+            [
+                "Did $s get his or her degree from $o?",
+                "TRUE"
+            ],
+            [
+                "Was the alma mater of $s $o?",
+                "TRUE"
+            ],
+            [
+                "Did $s get their degree from $o?",
+                "TRUE"
+            ],
+            [
+                "Was $s a student at $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "List places $s has studied",
+                "$o"
+            ],
+            [
+                "Where has $s gone to university?",
+                "$o"
+            ],
+            [
+                "List students at $o",
+                "$s"
+            ],
+            [
+                "Who has gone to university?",
+                "$s"
+            ],
+            [
+                "Where did $s get their degree?",
+                "$o"
+            ],
+            [
+                "Where has $s studied?",
+                "$o"
+            ],
+            [
+                "Where has $s been a student?",
+                "$o"
+            ],
+            [
+                "Who went to $o?",
+                "$s"
+            ],
+            [
+                "Who studied at $o?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many people study at $o?",
+                "$s"
+            ],
+            [
+                "How many students are at $o?",
+                "$s"
+            ],
+            [
+                "How many people graduated from $o?",
+                "$s"
+            ],
+            [
+                "How many places has $s studied?",
+                "$o"
+            ],
+            [
+                "Whow many people study?",
+                "$s"
+            ],
+            [
+                "How many degrees does $s have?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "What is the least popular university?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has got the fewest degrees?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which university has had the fewest students?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is is the smallest school?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has studied the least?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Where have the fewest people studied?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is the smallest school?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What school has the fewest students?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What university has the fewest students?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has been to the fewest schools?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What university has the smallest population?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has been to the fewest universities?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmax": [
+            [
+                "Where have the most people studied?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What university has the highest population?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is the biggest school?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is the most popular university?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has been to the most universities?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which university has had the most students?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What school has the most students?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What is the biggest university?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has got the most degrees?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who has been to the most schools?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What university has the most students?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has studied the most?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P58": {
+        "fact": [
+            "$o wrote the script of $s",
+            "$s was written by $o",
+            "The screenwriter for $s was $o"
+        ],
+        "bool": [
+            [
+                "Did $o write the script for $s?",
+                "TRUE"
+            ],
+            [
+                "Did $o write $s?",
+                "TRUE"
+            ],
+            [
+                "Did $o write the screenplay for $s?",
+                "TRUE"
+            ],
+            [
+                "Was $o involved in the making of $s?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "What films has $o written?",
+                "$s"
+            ],
+            [
+                "The script for $s is written by who?",
+                "$o"
+            ],
+            [
+                "Which movies has $o written?",
+                "$s"
+            ],
+            [
+                "$o has written which screenplays?",
+                "$s"
+            ],
+            [
+                "Who wrote the screenplay for $s?",
+                "$o"
+            ],
+            [
+                "Who is the screenwriter for $s?",
+                "$o"
+            ],
+            [
+                "Who wrote the script for $s?",
+                "$o"
+            ]
+        ],
+        "count": [
+            [
+                "How many writers were involved in $s?",
+                "$o"
+            ],
+            [
+                "How many movies was $o involved in?",
+                "$s"
+            ],
+            [
+                "How many movies has $o written the screenplay for?",
+                "$s"
+            ],
+            [
+                "How many movies has $o written?",
+                "$s"
+            ]
+        ],
+        "argmin": [
+            [
+                "Who has written the fewest screenplays?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Which movie has had the fewest writers",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who has the written the fewest movie scripts?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "Which movie has had the most writers?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who has written the most screenplays?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has written the most movie scripts?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P61": {
+        "fact": [
+            "$s was invented by $o",
+            "$o was the discoverer of $s",
+            "$o discovered $s",
+            "$o invented $s",
+            "$s was discovered by $o",
+            "$o was the inventor of $s"
+        ],
+        "bool": [
+            [
+                "Did $o discover $s?",
+                "TRUE"
+            ],
+            [
+                "Was $o the inventor of $s?",
+                "TRUE"
+            ],
+            [
+                "Was $s discovered by $o?",
+                "TRUE"
+            ],
+            [
+                "Was $s invented by $o?",
+                "TRUE"
+            ],
+            [
+                "Did $o invent $s?",
+                "TRUE"
+            ],
+            [
+                "Was $o the discoverer of $s?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Who discovered $s?",
+                "$o"
+            ],
+            [
+                "What has been invented?",
+                "$s"
+            ],
+            [
+                "Who was the inventor of $s?",
+                "$o"
+            ],
+            [
+                "List things $o discovered",
+                "$s"
+            ],
+            [
+                "What did $o discover?",
+                "$s"
+            ],
+            [
+                "List things $o invented",
+                "$s"
+            ],
+            [
+                "Who was the discoverer of $s?",
+                "$o"
+            ],
+            [
+                "Who invented $s?",
+                "$o"
+            ],
+            [
+                "List all things discovered",
+                "$s"
+            ],
+            [
+                "What did $o invent?",
+                "$s"
+            ],
+            [
+                "List all discoveries",
+                "$s"
+            ],
+            [
+                "List all inventions",
+                "$s"
+            ],
+            [
+                "What has been discovered?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many people invented $s?",
+                "$o"
+            ],
+            [
+                "How many things did $o invent?",
+                "$s"
+            ],
+            [
+                "How many things did $o discover?",
+                "$s"
+            ],
+            [
+                "How many people discovered $s?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "Who discovered the fewest things?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has had the fewest discoveries?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What has had the fewest inventors?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who has the least number of inventions?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What has had the least discoverers?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What item has had the fewest inventors?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who has the fewest inventions?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "Who has had the most number of inventions?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has discovered the most things?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What has had the most inventors?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who has the most inventions?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What has had the most discoverers?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Who has had the most discoveries?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What item has had the most inventors?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P1110": {
+        "fact": [
+            "$o went to $s",
+            "The attendance of $s was $o",
+            "The number of people at $s was $o",
+            "The attendance of $s is $o",
+            "$o people went to $s"
+        ],
+        "set": [
+            [
+                "What was the attendance of $s?",
+                "$o"
+            ],
+            [
+                "What were the attendances of all events?",
+                "$o"
+            ]
+        ],
+        "count": [
+            [
+                "How many people went to $o?",
+                "$o"
+            ],
+            [
+                "How many people went to events?",
+                "$o"
+            ]
+        ],
+        "min": [
+            [
+                "How many people went to the smallest event?",
+                "$o"
+            ],
+            [
+                "What was the smallest crowd?",
+                "$o"
+            ],
+            [
+                "How many went to the smallest event?",
+                "$o"
+            ]
+        ],
+        "max": [
+            [
+                "What was the largest crowd?",
+                "$o"
+            ],
+            [
+                "How many went to the largest event?",
+                "$o"
+            ],
+            [
+                "How many people went to the largest event?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "Which event was least well attended?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What was the least popular event?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What event had the smallest turnout?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What event had the lowest attendance?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmax": [
+            [
+                "What event had the largest turnout?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What event had the best attendance?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What event was most well attended?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What was the most popular event?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P6": {
+        "fact": [
+            "$s's government is led by $o.",
+            "$o is the leader of $s",
+            "The head of government of $s is $o",
+            "The leader of $s is $o",
+            "$o is the head of government of $s"
+        ],
+        "bool": [
+            [
+                "Is the leader of $s $o?",
+                "TRUE"
+            ],
+            [
+                "Is $o the leader of $s?",
+                "TRUE"
+            ],
+            [
+                "Is $s governed by $o?",
+                "TRUE"
+            ],
+            [
+                "Is $o a head of government of $s?",
+                "TRUE"
+            ],
+            [
+                "Is $s's government led by $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Who is a governer of $s?",
+                "$o"
+            ],
+            [
+                "Who governs $s?",
+                "$o"
+            ],
+            [
+                "$o is the leader of which places?",
+                "$s"
+            ],
+            [
+                "Which country is $o the leader of?",
+                "$s"
+            ],
+            [
+                "Where is $o the head of government?",
+                "$s"
+            ],
+            [
+                "Who is a head of government of $s?",
+                "$o"
+            ],
+            [
+                "$o is the leader of which governments?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "$o is the leader of how many places?",
+                "$s"
+            ],
+            [
+                "How many leaders does $s have?",
+                "$o"
+            ],
+            [
+                "How many country leaders are there?",
+                "$o"
+            ],
+            [
+                "How many heads of government are there?",
+                "$o"
+            ],
+            [
+                "How many heads of government preside in $s?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "Which place has the fewest leaders?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the country with the most number of leaders?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmax": [
+            [
+                "What country has the most number of leaders?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which place has the most leaders?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P118": {
+        "fact": [
+            "$s plays in $o",
+            "$s is a player in $o",
+            "The league that $s plays in is $o",
+            "$s participates in $o"
+        ],
+        "bool": [
+            [
+                "Is the league that $s plays for $o?",
+                "TRUE"
+            ],
+            [
+                "Is $s a participant of $o?",
+                "TRUE"
+            ],
+            [
+                "Does $s play in $o?",
+                "TRUE"
+            ],
+            [
+                "Does $s participate in $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Who participates in $o?",
+                "$s"
+            ],
+            [
+                "What league does $s play for?",
+                "$o"
+            ],
+            [
+                "What league is $s participant of?",
+                "$o"
+            ],
+            [
+                "Who plays in $o?",
+                "$s"
+            ]
+        ],
+        "count": [
+            [
+                "How many leagues has $s played for?",
+                "$o"
+            ],
+            [
+                "How many people play in $o?",
+                "$s"
+            ],
+            [
+                "How many leagues has $s participated in?",
+                "$o"
+            ],
+            [
+                "How many participants are there in $o?",
+                "$s"
+            ]
+        ],
+        "argmin": [
+            [
+                "Who has participated in the least number of leagues?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the smallest league?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has played in the fewest leagues?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What league has the fewest participants?",
+                "$o [SEP] $s"
+            ]
+        ],
+        "argmax": [
+            [
+                "What is the largest league?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has played for the most leagues?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What league has the most participants?",
+                "$o [SEP] $s"
+            ],
+            [
+                "Who has participated in the most number of leagues?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P38": {
+        "fact": [
+            "The accepted currency of $s is $o",
+            "The official currency of $s is $o",
+            "$s accepts $o",
+            "$s uses the $o",
+            "The currency of $s is $o"
+        ],
+        "bool": [
+            [
+                "Is $o accepted in $s?",
+                "TRUE"
+            ],
+            [
+                "Is $o used in $s?",
+                "TRUE"
+            ],
+            [
+                "Does $s accept $o?",
+                "TRUE"
+            ],
+            [
+                "Is $o used by $s?",
+                "TRUE"
+            ],
+            [
+                "Is the $o currency accepted by $s?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Where is $o used?",
+                "$s"
+            ],
+            [
+                "What currencies are accepted by $s?",
+                "$o"
+            ],
+            [
+                "What currency is used in $s?",
+                "$o"
+            ],
+            [
+                "Which places accept $o?",
+                "$s"
+            ],
+            [
+                "Which currencies are used by $s?",
+                "$o"
+            ],
+            [
+                "What currency is used by $s?",
+                "$o"
+            ],
+            [
+                "What currency is accepted by $s?",
+                "$o"
+            ]
+        ],
+        "count": [
+            [
+                "How many currencies does $s accept?",
+                "$o"
+            ],
+            [
+                "How many countries accept $o?",
+                "$s"
+            ],
+            [
+                "$o is a currency of how many places?",
+                "$s"
+            ],
+            [
+                "How many places accept $o?",
+                "$s"
+            ]
+        ],
+        "argmin": [
+            [
+                "What places accept the fewest different currencies?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the least used currency?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What country uses the fewest currencies?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmax": [
+            [
+                "What is the most used currency?",
+                "$o [SEP] $s"
+            ],
+            [
+                "What places accept the most currencies?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What country has the most currencies?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P1174": {
+        "fact": [
+            "$o people go to $s each year",
+            "$o people visit $s every year",
+            "$s has $o visitors per year",
+            "$o people visit $s annually ",
+            "The yearly visitor count at $s is $o"
+        ],
+        "count": [
+            [
+                "How many people visit attractions every year?",
+                "$o"
+            ],
+            [
+                "How many people visit $s every year?",
+                "$o"
+            ]
+        ],
+        "min": [
+            [
+                "What is the smallest annual attendance?",
+                "$o"
+            ],
+            [
+                "What is the smallest yearly attendance?",
+                "$o"
+            ],
+            [
+                "What is the smallest attendance?",
+                "$o"
+            ]
+        ],
+        "max": [
+            [
+                "What is the largest yearly attendance?",
+                "$o"
+            ],
+            [
+                "What is the largest attendance?",
+                "$o"
+            ],
+            [
+                "What is the largest annual attendance?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "What is the least attended attraction?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the attraction with the lowest visitor count per year?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What has the lowest number of visitors each year?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmax": [
+            [
+                "What is the attraction with the highest visitor count per year?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What has the highest number of visitors each year?",
+                "$s [SEP] $o"
+            ],
+            [
+                "What is the most attended attraction?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P1198": {
+        "fact": [
+            "$s's unemployment rate is $o",
+            "The unemployment rate of $s is $o",
+            "There are $o of people without jobs in $s",
+            "There are $o people out work in $s",
+            "There are $o of people without a job in $s"
+        ],
+        "bool": [
+            [
+                "Are there $o people unemployed in $s?",
+                "TRUE"
+            ],
+            [
+                "Is the unpemployment rate of $s $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "List unemployment rates",
+                ""
+            ],
+            [
+                "What is unemployment rate of $s?",
+                "$o"
+            ]
+        ],
+        "min": [
+            [
+                "What is the lowest unemployment rate?",
+                "$o"
+            ]
+        ],
+        "max": [
+            [
+                "What is the highest unemployment rate?",
+                "$o"
+            ]
+        ],
+        "argmin": [
+            [
+                "Where is the lowest unemployment?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Where does it have the lowest unemployment rate?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which places have the lowest unemployment rate?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which places have the least people out of work?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Where is the lowest unemployment rate?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "argmax": [
+            [
+                "Where is the highest unemployment?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Where does it have the highest unemployment rate?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Where is the highest unemployment rate?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which places have the highest unemployment rate?",
+                "$s [SEP] $o"
+            ],
+            [
+                "Which places have the most people out of work?",
+                "$s [SEP] $o"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    },
+    "P108": {
+        "fact": [
+            "$s is employed by $o",
+            "$s works for $o",
+            "The employer of $s is $o"
+        ],
+        "bool": [
+            [
+                "Is $o the employer of $s?",
+                "TRUE"
+            ],
+            [
+                "Does $s work for $o?",
+                "TRUE"
+            ],
+            [
+                "Is $s employed by $o?",
+                "TRUE"
+            ]
+        ],
+        "set": [
+            [
+                "Who does $s work for?",
+                "$o"
+            ],
+            [
+                "Who is employed by $o?",
+                "$s"
+            ],
+            [
+                "Who works for $o?",
+                "$s"
+            ],
+            [
+                "What company is $s employed by?",
+                "$o"
+            ]
+        ],
+        "count": [
+            [
+                "How many places has $s worked?",
+                "$o"
+            ],
+            [
+                "How many people work for $o?",
+                "$s"
+            ]
+        ],
+        "_subject": "$s",
+        "_object": "$o"
+    }
+}

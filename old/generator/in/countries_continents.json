@@ -1,0 +1,1003 @@
+{
+ "Afghanistan": {
+  "continent": "Asia",
+  "capital": "Kabul"
+ },
+ "Albania": {
+  "continent": "Europe",
+  "capital": "Tirana"
+ },
+ "Algeria": {
+  "continent": "Africa",
+  "capital": "Algiers"
+ },
+ "American Samoa": {
+  "continent": "Oceania",
+  "capital": "Pago Pago"
+ },
+ "Andorra": {
+  "continent": "Europe",
+  "capital": "Andorra la Vella"
+ },
+ "Angola": {
+  "continent": "Africa",
+  "capital": "Luanda"
+ },
+ "Anguilla": {
+  "continent": "North America",
+  "capital": "The Valley"
+ },
+ "Antarctica": {
+  "continent": "Antarctica",
+  "capital": ""
+ },
+ "Antigua and Barbuda": {
+  "continent": "North America",
+  "capital": "Saint John's"
+ },
+ "Argentina": {
+  "continent": "South America",
+  "capital": "Buenos Aires"
+ },
+ "Armenia": {
+  "continent": "Asia",
+  "capital": "Yerevan"
+ },
+ "Aruba": {
+  "continent": "North America",
+  "capital": "Oranjestad"
+ },
+ "Australia": {
+  "continent": "Oceania",
+  "capital": "Canberra"
+ },
+ "Austria": {
+  "continent": "Europe",
+  "capital": "Vienna"
+ },
+ "Azerbaijan": {
+  "continent": "Asia",
+  "capital": "Baku"
+ },
+ "Bahamas": {
+  "continent": "North America",
+  "capital": "Nassau"
+ },
+ "Bahrain": {
+  "continent": "Asia",
+  "capital": "Manama"
+ },
+ "Bangladesh": {
+  "continent": "Asia",
+  "capital": "Dhaka"
+ },
+ "Barbados": {
+  "continent": "North America",
+  "capital": "Bridgetown"
+ },
+ "Belarus": {
+  "continent": "Europe",
+  "capital": "Minsk"
+ },
+ "Belgium": {
+  "continent": "Europe",
+  "capital": "Brussels"
+ },
+ "Belize": {
+  "continent": "North America",
+  "capital": "Belmopan"
+ },
+ "Benin": {
+  "continent": "Africa",
+  "capital": "Porto-Novo"
+ },
+ "Bermuda": {
+  "continent": "North America",
+  "capital": "Hamilton"
+ },
+ "Bhutan": {
+  "continent": "Asia",
+  "capital": "Thimphu"
+ },
+ "Bolivia": {
+  "continent": "South America",
+  "capital": "Sucre"
+ },
+ "Bonaire": {
+  "continent": "North America",
+  "capital": "Kralendijk"
+ },
+ "Bosnia and Herzegovina": {
+  "continent": "Europe",
+  "capital": "Sarajevo"
+ },
+ "Botswana": {
+  "continent": "Africa",
+  "capital": "Gaborone"
+ },
+ "Bouvet Island": {
+  "continent": "Antarctica",
+  "capital": ""
+ },
+ "Brazil": {
+  "continent": "South America",
+  "capital": "Bras\u00edlia"
+ },
+ "British Indian Ocean Territory": {
+  "continent": "Asia",
+  "capital": "Diego Garcia"
+ },
+ "British Virgin Islands": {
+  "continent": "North America",
+  "capital": "Road Town"
+ },
+ "Brunei": {
+  "continent": "Asia",
+  "capital": "Bandar Seri Begawan"
+ },
+ "Bulgaria": {
+  "continent": "Europe",
+  "capital": "Sofia"
+ },
+ "Burkina Faso": {
+  "continent": "Africa",
+  "capital": "Ouagadougou"
+ },
+ "Burundi": {
+  "continent": "Africa",
+  "capital": "Bujumbura"
+ },
+ "Cambodia": {
+  "continent": "Asia",
+  "capital": "Phnom Penh"
+ },
+ "Cameroon": {
+  "continent": "Africa",
+  "capital": "Yaound\u00e9"
+ },
+ "Canada": {
+  "continent": "North America",
+  "capital": "Ottawa"
+ },
+ "Cape Verde": {
+  "continent": "Africa",
+  "capital": "Praia"
+ },
+ "Cayman Islands": {
+  "continent": "North America",
+  "capital": "George Town"
+ },
+ "Central African Republic": {
+  "continent": "Africa",
+  "capital": "Bangui"
+ },
+ "Chad": {
+  "continent": "Africa",
+  "capital": "N'Djamena"
+ },
+ "Chile": {
+  "continent": "South America",
+  "capital": "Santiago"
+ },
+ "China": {
+  "continent": "Asia",
+  "capital": "Beijing"
+ },
+ "Christmas Island": {
+  "continent": "Asia",
+  "capital": "Flying Fish Cove"
+ },
+ "Cocos [Keeling] Islands": {
+  "continent": "Asia",
+  "capital": "West Island"
+ },
+ "Colombia": {
+  "continent": "South America",
+  "capital": "Bogot\u00e1"
+ },
+ "Comoros": {
+  "continent": "Africa",
+  "capital": "Moroni"
+ },
+ "Cook Islands": {
+  "continent": "Oceania",
+  "capital": "Avarua"
+ },
+ "Costa Rica": {
+  "continent": "North America",
+  "capital": "San Jos\u00e9"
+ },
+ "Croatia": {
+  "continent": "Europe",
+  "capital": "Zagreb"
+ },
+ "Cuba": {
+  "continent": "North America",
+  "capital": "Havana"
+ },
+ "Curacao": {
+  "continent": "North America",
+  "capital": "Willemstad"
+ },
+ "Cyprus": {
+  "continent": "Europe",
+  "capital": "Nicosia"
+ },
+ "Czech Republic": {
+  "continent": "Europe",
+  "capital": "Prague"
+ },
+ "Democratic Republic of the Congo": {
+  "continent": "Africa",
+  "capital": "Kinshasa"
+ },
+ "Denmark": {
+  "continent": "Europe",
+  "capital": "Copenhagen"
+ },
+ "Djibouti": {
+  "continent": "Africa",
+  "capital": "Djibouti"
+ },
+ "Dominica": {
+  "continent": "North America",
+  "capital": "Roseau"
+ },
+ "Dominican Republic": {
+  "continent": "North America",
+  "capital": "Santo Domingo"
+ },
+ "East Timor": {
+  "continent": "Oceania",
+  "capital": "Dili"
+ },
+ "Ecuador": {
+  "continent": "South America",
+  "capital": "Quito"
+ },
+ "Egypt": {
+  "continent": "Africa",
+  "capital": "Cairo"
+ },
+ "El Salvador": {
+  "continent": "North America",
+  "capital": "San Salvador"
+ },
+ "Equatorial Guinea": {
+  "continent": "Africa",
+  "capital": "Malabo"
+ },
+ "Eritrea": {
+  "continent": "Africa",
+  "capital": "Asmara"
+ },
+ "Estonia": {
+  "continent": "Europe",
+  "capital": "Tallinn"
+ },
+ "Ethiopia": {
+  "continent": "Africa",
+  "capital": "Addis Ababa"
+ },
+ "Falkland Islands": {
+  "continent": "South America",
+  "capital": "Stanley"
+ },
+ "Faroe Islands": {
+  "continent": "Europe",
+  "capital": "T\u00f3rshavn"
+ },
+ "Fiji": {
+  "continent": "Oceania",
+  "capital": "Suva"
+ },
+ "Finland": {
+  "continent": "Europe",
+  "capital": "Helsinki"
+ },
+ "France": {
+  "continent": "Europe",
+  "capital": "Paris"
+ },
+ "French Guiana": {
+  "continent": "South America",
+  "capital": "Cayenne"
+ },
+ "French Polynesia": {
+  "continent": "Oceania",
+  "capital": "Papeet\u0113"
+ },
+ "French Southern Territories": {
+  "continent": "Antarctica",
+  "capital": "Port-aux-Fran\u00e7ais"
+ },
+ "Gabon": {
+  "continent": "Africa",
+  "capital": "Libreville"
+ },
+ "Gambia": {
+  "continent": "Africa",
+  "capital": "Banjul"
+ },
+ "Georgia": {
+  "continent": "Asia",
+  "capital": "Tbilisi"
+ },
+ "Germany": {
+  "continent": "Europe",
+  "capital": "Berlin"
+ },
+ "Ghana": {
+  "continent": "Africa",
+  "capital": "Accra"
+ },
+ "Gibraltar": {
+  "continent": "Europe",
+  "capital": "Gibraltar"
+ },
+ "Greece": {
+  "continent": "Europe",
+  "capital": "Athens"
+ },
+ "Greenland": {
+  "continent": "North America",
+  "capital": "Nuuk"
+ },
+ "Grenada": {
+  "continent": "North America",
+  "capital": "St. George's"
+ },
+ "Guadeloupe": {
+  "continent": "North America",
+  "capital": "Basse-Terre"
+ },
+ "Guam": {
+  "continent": "Oceania",
+  "capital": "Hag\u00e5t\u00f1a"
+ },
+ "Guatemala": {
+  "continent": "North America",
+  "capital": "Guatemala City"
+ },
+ "Guernsey": {
+  "continent": "Europe",
+  "capital": "St. Peter Port"
+ },
+ "Guinea": {
+  "continent": "Africa",
+  "capital": "Conakry"
+ },
+ "Guinea-Bissau": {
+  "continent": "Africa",
+  "capital": "Bissau"
+ },
+ "Guyana": {
+  "continent": "South America",
+  "capital": "Georgetown"
+ },
+ "Haiti": {
+  "continent": "North America",
+  "capital": "Port-au-Prince"
+ },
+ "Heard Island and McDonald Islands": {
+  "continent": "Antarctica",
+  "capital": ""
+ },
+ "Honduras": {
+  "continent": "North America",
+  "capital": "Tegucigalpa"
+ },
+ "Hong Kong": {
+  "continent": "Asia",
+  "capital": "City of Victoria"
+ },
+ "Hungary": {
+  "continent": "Europe",
+  "capital": "Budapest"
+ },
+ "Iceland": {
+  "continent": "Europe",
+  "capital": "Reykjavik"
+ },
+ "India": {
+  "continent": "Asia",
+  "capital": "New Delhi"
+ },
+ "Indonesia": {
+  "continent": "Asia",
+  "capital": "Jakarta"
+ },
+ "Iran": {
+  "continent": "Asia",
+  "capital": "Tehran"
+ },
+ "Iraq": {
+  "continent": "Asia",
+  "capital": "Baghdad"
+ },
+ "Ireland": {
+  "continent": "Europe",
+  "capital": "Dublin"
+ },
+ "Isle of Man": {
+  "continent": "Europe",
+  "capital": "Douglas"
+ },
+ "Israel": {
+  "continent": "Asia",
+  "capital": "Jerusalem"
+ },
+ "Italy": {
+  "continent": "Europe",
+  "capital": "Rome"
+ },
+ "Ivory Coast": {
+  "continent": "Africa",
+  "capital": "Yamoussoukro"
+ },
+ "Jamaica": {
+  "continent": "North America",
+  "capital": "Kingston"
+ },
+ "Japan": {
+  "continent": "Asia",
+  "capital": "Tokyo"
+ },
+ "Jersey": {
+  "continent": "Europe",
+  "capital": "Saint Helier"
+ },
+ "Jordan": {
+  "continent": "Asia",
+  "capital": "Amman"
+ },
+ "Kazakhstan": {
+  "continent": "Asia",
+  "capital": "Astana"
+ },
+ "Kenya": {
+  "continent": "Africa",
+  "capital": "Nairobi"
+ },
+ "Kiribati": {
+  "continent": "Oceania",
+  "capital": "South Tarawa"
+ },
+ "Kosovo": {
+  "continent": "Europe",
+  "capital": "Pristina"
+ },
+ "Kuwait": {
+  "continent": "Asia",
+  "capital": "Kuwait City"
+ },
+ "Kyrgyzstan": {
+  "continent": "Asia",
+  "capital": "Bishkek"
+ },
+ "Laos": {
+  "continent": "Asia",
+  "capital": "Vientiane"
+ },
+ "Latvia": {
+  "continent": "Europe",
+  "capital": "Riga"
+ },
+ "Lebanon": {
+  "continent": "Asia",
+  "capital": "Beirut"
+ },
+ "Lesotho": {
+  "continent": "Africa",
+  "capital": "Maseru"
+ },
+ "Liberia": {
+  "continent": "Africa",
+  "capital": "Monrovia"
+ },
+ "Libya": {
+  "continent": "Africa",
+  "capital": "Tripoli"
+ },
+ "Liechtenstein": {
+  "continent": "Europe",
+  "capital": "Vaduz"
+ },
+ "Lithuania": {
+  "continent": "Europe",
+  "capital": "Vilnius"
+ },
+ "Luxembourg": {
+  "continent": "Europe",
+  "capital": "Luxembourg"
+ },
+ "Macao": {
+  "continent": "Asia",
+  "capital": ""
+ },
+ "Madagascar": {
+  "continent": "Africa",
+  "capital": "Antananarivo"
+ },
+ "Malawi": {
+  "continent": "Africa",
+  "capital": "Lilongwe"
+ },
+ "Malaysia": {
+  "continent": "Asia",
+  "capital": "Kuala Lumpur"
+ },
+ "Maldives": {
+  "continent": "Asia",
+  "capital": "Mal\u00e9"
+ },
+ "Mali": {
+  "continent": "Africa",
+  "capital": "Bamako"
+ },
+ "Malta": {
+  "continent": "Europe",
+  "capital": "Valletta"
+ },
+ "Marshall Islands": {
+  "continent": "Oceania",
+  "capital": "Majuro"
+ },
+ "Martinique": {
+  "continent": "North America",
+  "capital": "Fort-de-France"
+ },
+ "Mauritania": {
+  "continent": "Africa",
+  "capital": "Nouakchott"
+ },
+ "Mauritius": {
+  "continent": "Africa",
+  "capital": "Port Louis"
+ },
+ "Mayotte": {
+  "continent": "Africa",
+  "capital": "Mamoudzou"
+ },
+ "Mexico": {
+  "continent": "North America",
+  "capital": "Mexico City"
+ },
+ "Micronesia": {
+  "continent": "Oceania",
+  "capital": "Palikir"
+ },
+ "Moldova": {
+  "continent": "Europe",
+  "capital": "Chi\u0219in\u0103u"
+ },
+ "Monaco": {
+  "continent": "Europe",
+  "capital": "Monaco"
+ },
+ "Mongolia": {
+  "continent": "Asia",
+  "capital": "Ulan Bator"
+ },
+ "Montenegro": {
+  "continent": "Europe",
+  "capital": "Podgorica"
+ },
+ "Montserrat": {
+  "continent": "North America",
+  "capital": "Plymouth"
+ },
+ "Morocco": {
+  "continent": "Africa",
+  "capital": "Rabat"
+ },
+ "Mozambique": {
+  "continent": "Africa",
+  "capital": "Maputo"
+ },
+ "Myanmar [Burma]": {
+  "continent": "Asia",
+  "capital": "Naypyidaw"
+ },
+ "Namibia": {
+  "continent": "Africa",
+  "capital": "Windhoek"
+ },
+ "Nauru": {
+  "continent": "Oceania",
+  "capital": "Yaren"
+ },
+ "Nepal": {
+  "continent": "Asia",
+  "capital": "Kathmandu"
+ },
+ "Netherlands": {
+  "continent": "Europe",
+  "capital": "Amsterdam"
+ },
+ "New Caledonia": {
+  "continent": "Oceania",
+  "capital": "Noum\u00e9a"
+ },
+ "New Zealand": {
+  "continent": "Oceania",
+  "capital": "Wellington"
+ },
+ "Nicaragua": {
+  "continent": "North America",
+  "capital": "Managua"
+ },
+ "Niger": {
+  "continent": "Africa",
+  "capital": "Niamey"
+ },
+ "Nigeria": {
+  "continent": "Africa",
+  "capital": "Abuja"
+ },
+ "Niue": {
+  "continent": "Oceania",
+  "capital": "Alofi"
+ },
+ "Norfolk Island": {
+  "continent": "Oceania",
+  "capital": "Kingston"
+ },
+ "North Korea": {
+  "continent": "Asia",
+  "capital": "Pyongyang"
+ },
+ "North Macedonia": {
+  "continent": "Europe",
+  "capital": "Skopje"
+ },
+ "Northern Mariana Islands": {
+  "continent": "Oceania",
+  "capital": "Saipan"
+ },
+ "Norway": {
+  "continent": "Europe",
+  "capital": "Oslo"
+ },
+ "Oman": {
+  "continent": "Asia",
+  "capital": "Muscat"
+ },
+ "Pakistan": {
+  "continent": "Asia",
+  "capital": "Islamabad"
+ },
+ "Palau": {
+  "continent": "Oceania",
+  "capital": "Ngerulmud"
+ },
+ "Palestine": {
+  "continent": "Asia",
+  "capital": "Ramallah"
+ },
+ "Panama": {
+  "continent": "North America",
+  "capital": "Panama City"
+ },
+ "Papua New Guinea": {
+  "continent": "Oceania",
+  "capital": "Port Moresby"
+ },
+ "Paraguay": {
+  "continent": "South America",
+  "capital": "Asunci\u00f3n"
+ },
+ "Peru": {
+  "continent": "South America",
+  "capital": "Lima"
+ },
+ "Philippines": {
+  "continent": "Asia",
+  "capital": "Manila"
+ },
+ "Pitcairn Islands": {
+  "continent": "Oceania",
+  "capital": "Adamstown"
+ },
+ "Poland": {
+  "continent": "Europe",
+  "capital": "Warsaw"
+ },
+ "Portugal": {
+  "continent": "Europe",
+  "capital": "Lisbon"
+ },
+ "Puerto Rico": {
+  "continent": "North America",
+  "capital": "San Juan"
+ },
+ "Qatar": {
+  "continent": "Asia",
+  "capital": "Doha"
+ },
+ "Republic of the Congo": {
+  "continent": "Africa",
+  "capital": "Brazzaville"
+ },
+ "Romania": {
+  "continent": "Europe",
+  "capital": "Bucharest"
+ },
+ "Russia": {
+  "continent": "Europe",
+  "capital": "Moscow"
+ },
+ "Rwanda": {
+  "continent": "Africa",
+  "capital": "Kigali"
+ },
+ "R\u00e9union": {
+  "continent": "Africa",
+  "capital": "Saint-Denis"
+ },
+ "Saint Barth\u00e9lemy": {
+  "continent": "North America",
+  "capital": "Gustavia"
+ },
+ "Saint Helena": {
+  "continent": "Africa",
+  "capital": "Jamestown"
+ },
+ "Saint Kitts and Nevis": {
+  "continent": "North America",
+  "capital": "Basseterre"
+ },
+ "Saint Lucia": {
+  "continent": "North America",
+  "capital": "Castries"
+ },
+ "Saint Martin": {
+  "continent": "North America",
+  "capital": "Marigot"
+ },
+ "Saint Pierre and Miquelon": {
+  "continent": "North America",
+  "capital": "Saint-Pierre"
+ },
+ "Saint Vincent and the Grenadines": {
+  "continent": "North America",
+  "capital": "Kingstown"
+ },
+ "Samoa": {
+  "continent": "Oceania",
+  "capital": "Apia"
+ },
+ "San Marino": {
+  "continent": "Europe",
+  "capital": "City of San Marino"
+ },
+ "Saudi Arabia": {
+  "continent": "Asia",
+  "capital": "Riyadh"
+ },
+ "Senegal": {
+  "continent": "Africa",
+  "capital": "Dakar"
+ },
+ "Serbia": {
+  "continent": "Europe",
+  "capital": "Belgrade"
+ },
+ "Seychelles": {
+  "continent": "Africa",
+  "capital": "Victoria"
+ },
+ "Sierra Leone": {
+  "continent": "Africa",
+  "capital": "Freetown"
+ },
+ "Singapore": {
+  "continent": "Asia",
+  "capital": "Singapore"
+ },
+ "Sint Maarten": {
+  "continent": "North America",
+  "capital": "Philipsburg"
+ },
+ "Slovakia": {
+  "continent": "Europe",
+  "capital": "Bratislava"
+ },
+ "Slovenia": {
+  "continent": "Europe",
+  "capital": "Ljubljana"
+ },
+ "Solomon Islands": {
+  "continent": "Oceania",
+  "capital": "Honiara"
+ },
+ "Somalia": {
+  "continent": "Africa",
+  "capital": "Mogadishu"
+ },
+ "South Africa": {
+  "continent": "Africa",
+  "capital": "Pretoria"
+ },
+ "South Georgia and the South Sandwich Islands": {
+  "continent": "Antarctica",
+  "capital": "King Edward Point"
+ },
+ "South Korea": {
+  "continent": "Asia",
+  "capital": "Seoul"
+ },
+ "South Sudan": {
+  "continent": "Africa",
+  "capital": "Juba"
+ },
+ "Spain": {
+  "continent": "Europe",
+  "capital": "Madrid"
+ },
+ "Sri Lanka": {
+  "continent": "Asia",
+  "capital": "Colombo"
+ },
+ "Sudan": {
+  "continent": "Africa",
+  "capital": "Khartoum"
+ },
+ "Suriname": {
+  "continent": "South America",
+  "capital": "Paramaribo"
+ },
+ "Svalbard and Jan Mayen": {
+  "continent": "Europe",
+  "capital": "Longyearbyen"
+ },
+ "Swaziland": {
+  "continent": "Africa",
+  "capital": "Lobamba"
+ },
+ "Sweden": {
+  "continent": "Europe",
+  "capital": "Stockholm"
+ },
+ "Switzerland": {
+  "continent": "Europe",
+  "capital": "Bern"
+ },
+ "Syria": {
+  "continent": "Asia",
+  "capital": "Damascus"
+ },
+ "S\u00e3o Tom\u00e9 and Pr\u00edncipe": {
+  "continent": "Africa",
+  "capital": "S\u00e3o Tom\u00e9"
+ },
+ "Taiwan": {
+  "continent": "Asia",
+  "capital": "Taipei"
+ },
+ "Tajikistan": {
+  "continent": "Asia",
+  "capital": "Dushanbe"
+ },
+ "Tanzania": {
+  "continent": "Africa",
+  "capital": "Dodoma"
+ },
+ "Thailand": {
+  "continent": "Asia",
+  "capital": "Bangkok"
+ },
+ "Togo": {
+  "continent": "Africa",
+  "capital": "Lom\u00e9"
+ },
+ "Tokelau": {
+  "continent": "Oceania",
+  "capital": "Fakaofo"
+ },
+ "Tonga": {
+  "continent": "Oceania",
+  "capital": "Nuku'alofa"
+ },
+ "Trinidad and Tobago": {
+  "continent": "North America",
+  "capital": "Port of Spain"
+ },
+ "Tunisia": {
+  "continent": "Africa",
+  "capital": "Tunis"
+ },
+ "Turkey": {
+  "continent": "Asia",
+  "capital": "Ankara"
+ },
+ "Turkmenistan": {
+  "continent": "Asia",
+  "capital": "Ashgabat"
+ },
+ "Turks and Caicos Islands": {
+  "continent": "North America",
+  "capital": "Cockburn Town"
+ },
+ "Tuvalu": {
+  "continent": "Oceania",
+  "capital": "Funafuti"
+ },
+ "U.S. Minor Outlying Islands": {
+  "continent": "Oceania",
+  "capital": ""
+ },
+ "U.S. Virgin Islands": {
+  "continent": "North America",
+  "capital": "Charlotte Amalie"
+ },
+ "Uganda": {
+  "continent": "Africa",
+  "capital": "Kampala"
+ },
+ "Ukraine": {
+  "continent": "Europe",
+  "capital": "Kyiv"
+ },
+ "United Arab Emirates": {
+  "continent": "Asia",
+  "capital": "Abu Dhabi"
+ },
+ "United Kingdom": {
+  "continent": "Europe",
+  "capital": "London"
+ },
+
+ "United States": {
+  "continent": "North America",
+  "capital": "Washington D.C."
+ },
+ "Uruguay": {
+  "continent": "South America",
+  "capital": "Montevideo"
+ },
+ "Uzbekistan": {
+  "continent": "Asia",
+  "capital": "Tashkent"
+ },
+ "Vanuatu": {
+  "continent": "Oceania",
+  "capital": "Port Vila"
+ },
+ "Vatican City": {
+  "continent": "Europe",
+  "capital": "Vatican City"
+ },
+ "Venezuela": {
+  "continent": "South America",
+  "capital": "Caracas"
+ },
+ "Vietnam": {
+  "continent": "Asia",
+  "capital": "Hanoi"
+ },
+ "Wallis and Futuna": {
+  "continent": "Oceania",
+  "capital": "Mata-Utu"
+ },
+ "Western Sahara": {
+  "continent": "Africa",
+  "capital": "El Aai\u00fan"
+ },
+ "Yemen": {
+  "continent": "Asia",
+  "capital": "Sana'a"
+ },
+ "Zambia": {
+  "continent": "Africa",
+  "capital": "Lusaka"
+ },
+ "Zimbabwe": {
+  "continent": "Africa",
+  "capital": "Harare"
+ },
+ "\u00c5land": {
+  "continent": "Europe",
+  "capital": "Mariehamn"
+ }
+}

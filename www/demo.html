@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NDB Demo</title>
+
+    <style>
+        html, body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .column {
+            flex:50%;
+            padding:30px;
+            margin-top:-20px;
+            width:50%;
+        }
+
+        .row {
+            display:flex;
+            padding:20px;
+        }
+
+        .model_input {
+            width:95%;
+            padding:10px;
+            border-radius: 5px;
+        }
+
+        textarea.model_input {
+            height:400px;
+            font-family: monospace;
+
+        }
+
+        .status {
+            width:95%;
+            min-height: 20px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+    </style>
+
+    <script>
+        var docCookies = {
+              getItem: function (sKey) {
+                if (!sKey) { return null; }
+                return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+              },
+              setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
+                if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false; }
+                var sExpires = "";
+                if (vEnd) {
+                  switch (vEnd.constructor) {
+                    case Number:
+                      sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
+                      break;
+                    case String:
+                      sExpires = "; expires=" + vEnd;
+                      break;
+                    case Date:
+                      sExpires = "; expires=" + vEnd.toUTCString();
+                      break;
+                  }
+                }
+                document.cookie = encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+                return true;
+              },
+              removeItem: function (sKey, sPath, sDomain) {
+                if (!this.hasItem(sKey)) { return false; }
+                document.cookie = encodeURIComponent(sKey) + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "");
+                return true;
+              },
+              hasItem: function (sKey) {
+                if (!sKey) { return false; }
+                return (new RegExp("(?:^|;\\s*)" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
+              },
+              keys: function () {
+                var aKeys = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "").split(/\s*(?:\=[^;]*)?;\s*/);
+                for (var nLen = aKeys.length, nIdx = 0; nIdx < nLen; nIdx++) { aKeys[nIdx] = decodeURIComponent(aKeys[nIdx]); }
+                return aKeys;
+              }
+            };
+
+        function disableForm() {
+            document.getElementById("txt_query").disabled = true
+            document.getElementById("txt_facts").disabled = true
+            document.getElementById("btn_exec").disabled = true
+        }
+
+        function enableForm() {
+            document.getElementById("txt_query").disabled = false
+            document.getElementById("txt_facts").disabled = false
+            document.getElementById("btn_exec").disabled = false
+        }
+
+        function submitQuery(facts, query, callback, callback_fail) {
+            disableForm();
+
+            var xmlHttp = new XMLHttpRequest();
+
+            xmlHttp.onreadystatechange = function () {
+                if(xmlHttp.readyState === XMLHttpRequest.DONE) {
+                    enableForm();
+
+                    if(xmlHttp.status === 200) {
+                        result = JSON.parse(xmlHttp.responseText)
+                        callback(result.action, result.projection, result.computation);
+                    } else {
+                        result = JSON.parse(xmlHttp.responseText)
+                        callback_fail(xmlHttp.status, result.error)
+                    }
+                }
+            }
+
+            xmlHttp.open("POST", "/query", true);
+            xmlHttp.setRequestHeader("Content-Type", "application/json");
+
+            xmlHttp.send(JSON.stringify({
+                "query": query,
+                "facts": facts
+            }));
+        }
+
+
+        function processQuery() {
+            query = document.getElementById("txt_query").value
+            facts = document.getElementById("txt_facts").value
+
+            docCookies.setItem("query", query)
+            docCookies.setItem("facts", facts)
+
+            document.getElementById("txt_action").value = ""
+            document.getElementById("txt_projection").value = ""
+            document.getElementById("txt_computation").value = ""
+
+            document.getElementById("status").value = ""
+            document.getElementById("status").innerHTML = "Loading"
+
+            submitQuery(facts, query, function (action, projection, computation) {
+                document.getElementById("txt_action").value = action
+                document.getElementById("txt_projection").value = projection
+                document.getElementById("txt_computation").value = computation
+                document.getElementById("status").innerHTML = "Query completed OK"
+            }, function(code, text) {
+                document.getElementById("status").innerHTML = "Error " + code.toString() + ": \n" + text
+            });
+        }
+
+        function restoreState() {
+            console.log("restore state")
+            if (docCookies.hasItem("query")) {
+                document.getElementById("txt_query").value = docCookies.getItem("query")
+            }
+
+
+            if (docCookies.hasItem("facts")) {
+                document.getElementById("txt_facts").value = docCookies.getItem("facts")
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            restoreState();
+        });
+
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Neural DB Demo</h1>
+</header>
+
+<div class="row">
+
+    <div class="column">
+        <h2>Inputs</h2>
+        <h3>Query</h3>
+        <input id="txt_query" class="model_input" type="text" />
+        <h3>Facts</h3>
+        <textarea wrap="soft" id="txt_facts" class="model_input"></textarea>
+        <h3>Go!</h3>
+        <button id="btn_exec" onclick="processQuery();">Execute Query</button>
+
+    </div>
+
+    <div class="column">
+        <h2>Outputs</h2>
+        <h3>Predicted Action</h3>
+        <input id="txt_action" disabled="disabled" class="model_input model_output" type="text" />
+
+        <h3>Predicted Fact Projections</h3>
+        <textarea id="txt_projection" disabled="disabled" class="model_input model_output"></textarea>
+
+        <h3>Computed Result</h3>
+        <input id="txt_computation" disabled="disabled" type="text" class="model_input model_output"></input>
+
+        <h3>Status Messages</h3>
+        <pre class="status" id="status"></pre>
+        <pre class="status" style="overflow-x: scroll">cls_model = {{ cls_path }}
+nuo_model = {{ nuo_path }}
+        </pre>
+    </div>
+
+
+</div>
+
+</body>
+</html>
