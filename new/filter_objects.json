@@ -1,0 +1,42 @@
+{
+    "P54": {
+        "P17": ["a club located in $AO", "a team located in $AO"],
+        "P118": ["a team in $AO"]
+    },
+    "P50": {
+
+        "P27": ["someone from $AO"],
+        "P21": ["someone who is a $AO"],
+        "P108": ["someone who is employed by $AO"],
+        "P106": ["someone who works as a $AO"],
+        "P39": ["someone who is a $AO"],
+        "P166": ["someone who won a $AO"],
+        "P463": ["someone who is a member of $AO"],
+        "P937": ["someone who works in $AO"]
+    },
+    "P58": {
+
+        "P27": ["someone from $AO"],
+        "P21": ["someone who is a $AO"],
+        "P108": ["someone who is employed by $AO"],
+        "P106": ["someone who works as a $AO"],
+        "P39": ["someone who is a $AO"],
+        "P166": ["someone who won a $AO"],
+        "P463": ["someone who is a member of $AO"],
+        "P937": ["someone who works in $AO"]
+    },
+    "P61": {
+        "P27": ["someone from $AO"],
+        "P21": ["someone who is a $AO"],
+        "P108": ["someone who is employed by $AO"],
+        "P106": ["someone who works as a $AO"],
+        "P39": ["someone who is a $AO"],
+        "P166": ["someone who won a $AO"],
+        "P463": ["someone who is a member of $AO"],
+        "P937": ["someone who works in $AO"]
+    },
+    "P69": {
+        "P17": ["an institution in $AO"]
+    }
+
+}

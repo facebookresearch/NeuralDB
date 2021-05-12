@@ -1,0 +1,11 @@
+pydash
+pymongo
+tqdm
+transformers>4
+pytorch-lightning
+hydra-core
+pinject
+sacrebleu
+rouge-score
+git-python==1.0.3
+sentencepiece != 0.1.92

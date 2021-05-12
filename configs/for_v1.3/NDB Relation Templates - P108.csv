@@ -1,6 +1,0 @@
-108,https://www.wikidata.org/wiki/Property:P106,$s person has job at $o,,,,,,,,,,,,,,,,,,,,,,,,,,,
-fact,example,bool,example,bool_answer,example_output,set,example,set_projection,example_output,count,example,count_projection,example_output,argmin,example,argmin_projection,example_output,argmax,example,argmax_projection,example_output,min,example,min_projection,example_output,max,example,max_projection,example_output
-$s is employed by $o,Neil Armstrong is employed by NASA,Is $s employed by $o?,Is Neil Armstrong employed by NASA?,TRUE,TRUE,Who does $s work for?,Who does Neil Armstrong work for?,$o,NASA,How many places has $s worked?,How many places has Neil Armstrong worked?,$o,NASA,,,,,,,,,,,,,,,,
-The employer of $s is $o,The employer of Neil Armstrong is NASA,Does $s work for $o?,Does Neil Armstrong work for NASA?,TRUE,TRUE,Who works for $o?,Who works for NASA?,$s,Neil Armstrong,How many people work for $o?,How many people work for NASA?,$s,Neil Armstrong,,,,,,,,,,,,,,,,
-$s works for $o,Neil Armstrong works for NASA,Is $o the employer of $s?,Is NASA the employer of Neil Armstrong?,TRUE,TRUE,Who is employed by $o?,Who is employed by NASA?,$s,Neil Armstrong,,,,,,,,,,,,,,,,,,,,
-,,,,,,What company is $s employed by?,What company is Neil Armstrong employed by?,$o,NASA,,,,,,,,,,,,,,,,,,,,

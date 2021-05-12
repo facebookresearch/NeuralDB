@@ -1,7 +1,0 @@
-torch
-transformers<3
-tensorboard>=1.14
-fever-drqa
-strsim
-pytorch-lightning==0.7.3
-overrides

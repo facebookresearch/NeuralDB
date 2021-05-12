@@ -1,0 +1,6 @@
+model:
+  model_name_or_path: t5-base
+data:
+  train_path: generated_dbs.jsonl
+  val_path: generated_dbs.jsonl
+  output_dir: a
