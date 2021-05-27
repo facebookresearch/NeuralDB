@@ -107,11 +107,12 @@ def create_dataset_v3(db):
             t = q['height']
             gold_facts = q['facts']
             query_type = q['type']
-            context = ctx[0:t+1]
+            context = ctx[:t+1]
             flat_facts = [item for sublist in gold_facts for item in sublist]
             #print(flat_facts)
             # all facts in flat facts can be positive
-            state = [q['question']]
+            #print(q)
+            state = [q['query']]
 
             pos_act = [context[g] for g in flat_facts]
             neg_act = [x for i, x in enumerate(context) if i not in flat_facts]
@@ -124,7 +125,7 @@ def create_dataset_v3(db):
 
             for g in gold_facts:
                 if len(g) <= 1:
-                    state = [q['question'], context[g[0]]]
+                    state = [q['query'], context[g[0]]]
 
                     pos_act = eos
                     neg_act = context
@@ -135,21 +136,21 @@ def create_dataset_v3(db):
                     g_0 = g[0]
                     g_1 = g[1]
 
-                    state = [q['question'], context[g_0]]
+                    state = [q['query'], context[g_0]]
                     pos_act = context[g_1]
                     neg_act = [x for i, x in enumerate(context) if i != g_1]
                     item = [state, pos_act, 1]
                     dataset.append(item)
                     dataset.extend([[state, n, 0] for n in neg_act])
 
-                    state = [q['question'], context[g_1]]
+                    state = [q['query'], context[g_1]]
                     pos_act = context[g_0]
                     neg_act = [x for i, x in enumerate(context) if i != g_0]
                     item = [state, pos_act, 1]
                     dataset.append(item)
                     dataset.extend([[state, n, 0] for n in neg_act])
 
-                    state = [q['question'], context[g_0], context[g_1]]
+                    state = [q['query'], context[g_0], context[g_1]]
                     pos_act = eos
                     neg_act = context
                     item = [state, pos_act, 1]

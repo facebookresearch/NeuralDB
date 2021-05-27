@@ -6,15 +6,15 @@ from sentence_transformers.losses import *
 from torch.utils.data import DataLoader
 from torch.utils.data.sampler import WeightedRandomSampler
 
-from ssg.ssg_utils import read_NDB_v2, create_dataset_v2,  create_dataset_v3
+from ssg_utils import read_NDB_v2, create_dataset_v2,  create_dataset_v3
 
-folder = 'v1.8_25'
+folder = '../v2.3_25'
 
 # Define the model. Either from scratch of by loading a pre-trained model
-model = SentenceTransformer('distilbert-base-nli-mean-tokens', device='cuda:0')
+model = SentenceTransformer('distilbert-base-nli-mean-tokens', device='cuda:3')
 
 name = 'train'  # 'test_queries_last_',
-size = 50
+size = 200
 data_file = folder + "/" + name + ".jsonl"
 db = read_NDB_v2(data_file)
 dataset = create_dataset_v3(db)
@@ -42,7 +42,7 @@ for d in dataset:
     label = d[2]
     dev_examples.append(InputExample(texts=texts, label=label))
 
-batch_size = 10
+batch_size = 120
 print(len(train_examples))
 train_loss = ContrastiveLoss(model)
 # Tune the model
@@ -60,4 +60,4 @@ train_dataloader = DataLoader(train_dataset, sampler=sampler, shuffle=False, bat
 evaluator = BinaryClassificationEvaluator.from_input_examples(dev_examples, batch_size=batch_size)
 
 model.fit(train_objectives=[(train_dataloader, train_loss)], epochs=10, warmup_steps=100, evaluator=evaluator,
-          output_path="ssg-sentencetransformer-alldata-weighted-1.8", evaluation_steps=5000)
+          output_path="ssg-sentencetransformer-alldata-weighted-2.3-x10", evaluation_steps=5000)

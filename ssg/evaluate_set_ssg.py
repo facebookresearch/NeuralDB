@@ -44,10 +44,24 @@ def evaluate_ndb_with_ssg(data_file):
         gold_facts = d["gold_facts"]
         ssg_output = [[f[0] for f in ss] for ss in d["ssg_output"]]
 
-        print(gold_facts)
-        print(ssg_output)
+        remove_lst = []
+        for s in ssg_output:
+            if len(s)>1 and [s[1], s[0]] in ssg_output and [s[1], s[0]] not in remove_lst:
+                remove_lst.append(s)
+        #print("remove_list")
+        #print(ssg_output)
+        #print(remove_lst)
+        for r in remove_lst:
+            ssg_output.remove(r)
+        #print(ssg_output)
+
+
+
+        #print(gold_facts)
+
         answer = d["answer"]
         q_type = d["metadata"]['query_type']
+        print(q_type)
         if 'complex' in q_type:
             q_type = 'join'
         if 'arg' in q_type or 'min' in q_type or 'max' in q_type:
@@ -82,17 +96,25 @@ def evaluate_ndb_with_ssg(data_file):
 
         for s in ssg_output:
             ssg_count = ssg_count + 1
+
             if s in gold_facts or len(s) == 0:
                     total_soft = total_soft + 1
                     total_exact = total_exact + 1
             else:
-                for gold_s in gold_facts:
-                    print(gold_s)
-                    print(s)
-                    if set(gold_s) <= set(s):
-                        total_soft = total_soft + 1
-                        break
-
+                if len(s)>1 and [s[1], s[0]] in gold_facts:
+                    total_soft = total_soft + 1
+                    total_exact = total_exact + 1
+                else:
+                    for gold_s in gold_facts:
+                        #print(gold_s)
+                        #print(s)
+                        if set(gold_s) <= set(s):
+                            total_soft = total_soft + 1
+                            break
+        print("gold:")
+        print(gold_facts)
+        print("ssg:")
+        print(ssg_output)
         print(total_soft/ssg_count, total_exact/ssg_count)
         P_soft = P_soft + total_soft/ssg_count
         P_exact = P_exact + total_exact/ssg_count
@@ -105,18 +127,18 @@ def evaluate_ndb_with_ssg(data_file):
             gold_count=1
         else:
 
-            print(q_type)
-            print("gold:")
-            print(gold_facts)
-            print("ssg:")
-            print(ssg_output)
+            #print(q_type)
+            #print("gold:")
+            #print(gold_facts)
+            #print("ssg:")
+            #print(ssg_output)
             for g in gold_facts:
                 gold_count = gold_count+1
                 exact, soft = find_matches(set(g), ssg_output)
                 total_soft = total_soft + soft
                 total_exact = total_exact + exact
 
-        print(total_soft, total_exact)
+        print(total_soft/ gold_count, total_exact/ gold_count)
         R_soft = R_soft + total_soft / gold_count
         R_exact = R_exact + total_exact / gold_count
 
@@ -147,4 +169,4 @@ def evaluate_ndb_with_ssg(data_file):
     print(total_p_soft / total_c, total_r_soft / total_c)
 
 
-evaluate_ndb_with_ssg("../v1.8_2500/test_0.76_st_ssg_ds.json")
+evaluate_ndb_with_ssg("../v2.3_25/test_0.8_st_ssg_sup.json")
