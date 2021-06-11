@@ -1,0 +1,73 @@
+{
+    "P54": {
+      "P17": [
+        "What is the country of the player who"
+      ],
+      "P118": [
+        "What is the league of the player who"
+      ]
+    },
+  "P50": {
+    "P27": [
+      "What is the country of the person that"
+    ],
+    "P21": [
+      "What is the gender of the person that"
+    ],
+    "P108": [
+      "What is the employer of the person that"
+    ],
+    "P106": [
+      "What is the occupation of the person that"
+    ],
+    "P39": [
+      "What is the position of the person that"
+    ],
+    "P166": [
+      "What prize did the person that $X win?"
+    ],
+    "P463": [
+      "What is the affiliation of the person that"
+    ],
+    "P937": [
+      "What is the field that $X works in?"
+    ]
+  },
+  "P61": {
+    "P27": [
+      "What is the country of the person that"
+    ],
+    "P21": [
+      "What is the gender of the person that"
+    ],
+    "P108": [
+      "What is the employer of the person that"
+    ],
+    "P106": [
+      "What is the occupation of the person that"
+    ],
+    "P39": [
+      "What is the position of the person that"
+    ],
+    "P166": [
+      "What prize did the person that $X win?"
+    ],
+    "P463": [
+      "What is the affiliation of the person that"
+    ],
+    "P937": [
+      "What is the field that $X works in?"
+    ]
+  },
+  "P69": {
+    "P27": [
+      "What country is the institution of the person who has"
+    ],
+    "P463": [
+      "What affiliation is the institution of the person that has"
+    ],
+    "P937": [
+      "What is the field of the institution of the person that has"
+    ]
+  }
+}

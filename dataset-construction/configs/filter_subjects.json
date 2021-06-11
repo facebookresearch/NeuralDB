@@ -1,0 +1,30 @@
+{
+    "P54": {
+        "P2067": ["someone who weighs $AO"],
+        "P2048": ["someone $AO tall"],
+        "P21": ["someone who is a $AO"],
+        "P413": ["someone who plays $AO"],
+        "P569": ["someone born on $AO"],
+        "P27": ["someone from $AO"]
+    },
+    "P50": {
+        "P136": ["a work with the genre $AO"],
+        "P495": ["a work originating from $AO"],
+        "P577": ["a work published on $AO"]
+    },
+    "P58": {
+        "P136": ["a work with the genre $AO"],
+        "P495": ["a work originating from $AO"],
+        "P577": ["a work published on $AO"]
+    },
+    "P69": {
+        "P27": ["someone from $AO"],
+        "P21": ["someone who is a $AO"],
+        "P108": ["someone who is employed by $AO"],
+        "P106": ["someone who works as a $AO"],
+        "P39": ["someone who is a $AO"],
+        "P166": ["someone who won a $AO"],
+        "P463": ["someone who is a member of $AO"],
+        "P937": ["someone who works in $AO"]
+    }
+}

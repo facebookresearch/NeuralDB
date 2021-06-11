@@ -1,0 +1,29 @@
+{
+    "P54": {
+        "P27": ["What is the citizenship of the player that"],
+        "P2067": ["What is the weight of the player that"],
+        "P2048": ["What is the height of the player that"],
+        "P569": ["What is the date of birth of the player that"]
+    },
+    "P50": {
+        "P136": ["What is the genre of the work of the"],
+        "P495": ["Where did the work that $X originate from?"],
+        "P577": ["When was the work that $X published"]
+    },
+    "P58": {
+        "P136": ["What is the genre of the work that"],
+        "P495": ["Where did the work that $X originate from?"],
+        "P577": ["When was the work that $X published"]
+    },
+    "P69": {
+        "P27": ["What is the country of the person that went to"],
+        "P21": ["What is the gender of the person that went to"],
+        "P108": ["What is the employer of the person that went to"],
+        "P106": ["What is the occupation of the person that went to"],
+        "P39": ["What is the position of the person that went to"],
+        "P166": ["What prize did the person that went to $X win?"],
+        "P463": ["What is the affiliation of the person that went to"],
+        "P937": ["What field does the person that went to $X work in?"]
+    }
+
+}
