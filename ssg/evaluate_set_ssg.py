@@ -1,23 +1,23 @@
+import argparse
 import json
+import os
 
 
-
-
-def find_matches(a , a_set):
+def find_matches(a_set, a_set_of_sets):
     exact = 0
     soft = 0
     found = False
-    for s in a_set:
+    for s in a_set_of_sets:
         s_set = set(s)
-        if a == s_set:
-            exact =  1
+        if a_set == s_set:
+            exact = 1
             soft = 1
             found = True
             break
     if not found:
-        for s in a_set:
+        for s in a_set_of_sets:
             s_set = set(s)
-            if a <= s_set:
+            if a_set <= s_set:
                 soft = 1
                 break
 
@@ -44,10 +44,17 @@ def evaluate_ndb_with_ssg(data_file):
         gold_facts = d["gold_facts"]
         ssg_output = [[f[0] for f in ss] for ss in d["ssg_output"]]
 
-        print(gold_facts)
-        print(ssg_output)
+        # in some legacy versions we might have both [4,5] and [5,4] in the ssg output; we remove one.
+        remove_lst = []
+        for s in ssg_output:
+            if len(s) > 1 and [s[1], s[0]] in ssg_output and [s[1], s[0]] not in remove_lst:
+                remove_lst.append(s)
+        for r in remove_lst:
+            ssg_output.remove(r)
+
         answer = d["answer"]
         q_type = d["metadata"]['query_type']
+
         if 'complex' in q_type:
             q_type = 'join'
         if 'arg' in q_type or 'min' in q_type or 'max' in q_type:
@@ -63,60 +70,53 @@ def evaluate_ndb_with_ssg(data_file):
             R_soft = Rs_soft[q_type]
             P_exact = Ps_exact[q_type]
             R_exact = Rs_exact[q_type]
-            c = C[q_type]+1
-
+            c = C[q_type] + 1
 
         ssg_count = 0
         gold_count = 0
         total_soft = 0
         total_exact = 0
 
-        #ssg_output = [[f[0] for f in ss] for ss in ssg_output]
-
-
         ## precision
         if len(ssg_output) == 0:
-            total_soft =  1
-            total_exact =  1
+            total_soft = 1
+            total_exact = 1
             ssg_count = 1
 
         for s in ssg_output:
             ssg_count = ssg_count + 1
+
             if s in gold_facts or len(s) == 0:
+                total_soft = total_soft + 1
+                total_exact = total_exact + 1
+            else:
+                if len(s) > 1 and [s[1], s[0]] in gold_facts:
                     total_soft = total_soft + 1
                     total_exact = total_exact + 1
-            else:
-                for gold_s in gold_facts:
-                    print(gold_s)
-                    print(s)
-                    if set(gold_s) <= set(s):
-                        total_soft = total_soft + 1
-                        break
+                else:
+                    for gold_s in gold_facts:
 
-        print(total_soft/ssg_count, total_exact/ssg_count)
-        P_soft = P_soft + total_soft/ssg_count
-        P_exact = P_exact + total_exact/ssg_count
+                        if set(gold_s) <= set(s):
+                            total_soft = total_soft + 1
+                            break
+
+        P_soft = P_soft + total_soft / ssg_count
+        P_exact = P_exact + total_exact / ssg_count
+
         total_exact = 0
         total_soft = 0
         ## Recall
-        if len(gold_facts) == 0 or answer=="None":
+        if len(gold_facts) == 0 or answer == "None":
             total_soft = 1
             total_exact = 1
-            gold_count=1
+            gold_count = 1
         else:
-
-            print(q_type)
-            print("gold:")
-            print(gold_facts)
-            print("ssg:")
-            print(ssg_output)
             for g in gold_facts:
-                gold_count = gold_count+1
+                gold_count = gold_count + 1
                 exact, soft = find_matches(set(g), ssg_output)
                 total_soft = total_soft + soft
                 total_exact = total_exact + exact
 
-        print(total_soft, total_exact)
         R_soft = R_soft + total_soft / gold_count
         R_exact = R_exact + total_exact / gold_count
 
@@ -147,4 +147,18 @@ def evaluate_ndb_with_ssg(data_file):
     print(total_p_soft / total_c, total_r_soft / total_c)
 
 
-evaluate_ndb_with_ssg("../v1.8_2500/test_0.76_st_ssg_ds.json")
+def is_valid_file(parser, arg):
+    if not os.path.exists(arg):
+        parser.error("The file %s does not exist!" % arg)
+    else:
+        return arg
+
+
+parser = argparse.ArgumentParser(description='ssg predictions evaluations')
+parser.add_argument("-i", dest="predictions_file", required=True,
+                    help="predictions file",
+                    type=lambda x: is_valid_file(parser, x))
+
+args = parser.parse_args()
+
+evaluate_ndb_with_ssg(args.predictions_file)
