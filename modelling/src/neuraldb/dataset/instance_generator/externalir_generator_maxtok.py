@@ -16,9 +16,9 @@ class ExternalIRGeneratorMaxTok(InstanceGenerator):
         facts = set(itertools.chain(*query_obj["predicted_facts"]))
         context_tokens = []
         for fact in facts:
-             context_tokens.append(update_tokens[fact])
-             if len(list(itertools.chain(*context_tokens)))>900:
-                 break
+            context_tokens.append(update_tokens[fact])
+            if len(list(itertools.chain(*context_tokens))) > 900:
+                break
 
         yield self.maybe_decorate_with_metadata(
             {

@@ -1,6 +1,7 @@
-import pymongo
 from pymongo import UpdateOne
 from tqdm import tqdm
+
+from ndb_data.wikidata_common.wikidata import Wikidata
 
 
 def write_updates(batch_update):
@@ -12,9 +13,8 @@ def write_updates(batch_update):
 
 
 if __name__ == "__main__":
-    client = pymongo.MongoClient("mongodb://jt:jt@localhost:27017")
-    db = client["wikidata"]
-    collection = db["wiki_graph"]
+    client = Wikidata()
+    collection = client.collection
 
     batch_update = []
 

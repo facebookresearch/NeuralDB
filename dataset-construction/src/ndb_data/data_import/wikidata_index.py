@@ -6,8 +6,9 @@ from json import JSONDecodeError
 import pydash
 from argparse import ArgumentParser
 
-import pymongo
 from tqdm import tqdm
+
+from ndb_data.wikidata_common.wikidata import Wikidata
 
 
 def read_dump(wikidata_file):
@@ -57,9 +58,8 @@ if __name__ == "__main__":
     parser.add_argument("wikidata_file")
     args = parser.parse_args()
 
-    client = pymongo.MongoClient("mongodb://jt:jt@127.0.0.1:27017")
-    db = client["wikidata"]
-    collection = db["wiki_graph"]
+    wiki = Wikidata()
+    collection = wiki.collection
 
     insert_count = 0
     dump = read_dump(args.wikidata_file)
@@ -87,4 +87,3 @@ if __name__ == "__main__":
 
     print("last")
     collection.insert_many(batch)
-    client.close()

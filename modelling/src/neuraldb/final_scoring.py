@@ -54,7 +54,9 @@ def load_experiment(path):
 
 
 if __name__ == "__main__":
-    ndb_predictions = glob.glob("consolidated/work/v2.4_25/**/predictions.jsonl", recursive=True)
+    ndb_predictions = glob.glob(
+        "consolidated/work/v2.4_25/**/predictions.jsonl", recursive=True
+    )
     all_experiments = []
     for prediction in ndb_predictions:
         print(prediction)
@@ -84,11 +86,13 @@ if __name__ == "__main__":
         del expt["path"]
 
     frame = pd.DataFrame(all_experiments)
-    frame[frame.select_dtypes(include=['number']).columns] *= 100
+    frame[frame.select_dtypes(include=["number"]).columns] *= 100
     pd.set_option("display.width", 1000)
     pd.set_option("display.max_columns", None)
 
     aggr = {"all_": [np.mean, np.std]}
-    aggr.update({k:[np.mean] for k in frame.columns if "type" in k})
-    pt = pd.pivot_table(frame,index=["model","generator","retriever","lr", "steps"], aggfunc=aggr)
+    aggr.update({k: [np.mean] for k in frame.columns if "type" in k})
+    pt = pd.pivot_table(
+        frame, index=["model", "generator", "retriever", "lr", "steps"], aggfunc=aggr
+    )
     print(pt)

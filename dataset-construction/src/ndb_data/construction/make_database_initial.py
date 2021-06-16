@@ -96,8 +96,8 @@ if __name__ == "__main__":
     # Make train/dev/test split
     number_to_make = dict()
     number_to_make["train"] = args.num_dbs_to_make
-    number_to_make["dev"] = max(5,args.num_dbs_to_make // 10)
-    number_to_make["test"] = max(5,args.num_dbs_to_make // 10)
+    number_to_make["dev"] = max(5, args.num_dbs_to_make // 10)
+    number_to_make["test"] = max(5, args.num_dbs_to_make // 10)
 
     all_entities = list(set(all_subjects).union(set(all_objects)))
     random.shuffle(all_entities)

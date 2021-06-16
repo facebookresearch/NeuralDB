@@ -9,7 +9,10 @@ if __name__ == "__main__":
     parser.add_argument("in_file")
     parser.add_argument("out_file")
     args = parser.parse_args()
-    with open(args.in_file) as f, open(args.out_file, "w+",) as of:
+    with open(args.in_file) as f, open(
+        args.out_file,
+        "w+",
+    ) as of:
         for line in f:
             results = json.loads(line)
             for prediction in results["test"]["raw"]:

@@ -9,7 +9,7 @@ from neuraldb.evaluation.scoring_functions import f1
 from functools import reduce
 
 
-def load_experiment(path,db_sizes):
+def load_experiment(path, db_sizes):
 
     running_score = defaultdict(lambda: defaultdict(int))
     running_count = defaultdict(lambda: defaultdict(int))
@@ -81,7 +81,7 @@ def load_experiment(path,db_sizes):
 
 
 if __name__ == "__main__":
-    dbs = ["v2.4_25","v2.4_50","v2.4_100","v2.4_250","v2.4_500","v2.4_1000"]
+    dbs = ["v2.4_25", "v2.4_50", "v2.4_100", "v2.4_250", "v2.4_500", "v2.4_1000"]
     all_dbs = {}
     for file in dbs:
         master_file = f"resources/{file}/test.jsonl"
@@ -99,8 +99,9 @@ if __name__ == "__main__":
                     )
         all_dbs[file] = db_sizes
 
-
-    ndb_predictions = glob.glob("consolidated/work/*/**/predictions.jsonl", recursive=True)
+    ndb_predictions = glob.glob(
+        "consolidated/work/*/**/predictions.jsonl", recursive=True
+    )
     all_experiments = []
     for prediction in ndb_predictions:
 
@@ -136,11 +137,23 @@ if __name__ == "__main__":
     pd.set_option("display.width", 1000)
     pd.set_option("display.max_columns", None)
 
-    aggr = {"all_":[np.mean, np.std]}
+    aggr = {"all_": [np.mean, np.std]}
 
-    pt = pd.pivot_table(original_frame,index=["dataset","model","generator","retriever","lr", "steps"], aggfunc=aggr,fill_value=0)
+    pt = pd.pivot_table(
+        original_frame,
+        index=["dataset", "model", "generator", "retriever", "lr", "steps"],
+        aggfunc=aggr,
+        fill_value=0,
+    )
     frame = pd.DataFrame(pt.to_records())
-    frame.columns = [hdr.replace("('all_\', \'", "all.").replace("('size_","size_").replace(", ",".").replace(")", "").replace("\'","") for hdr in frame.columns]
+    frame.columns = [
+        hdr.replace("('all_', '", "all.")
+        .replace("('size_", "size_")
+        .replace(", ", ".")
+        .replace(")", "")
+        .replace("'", "")
+        for hdr in frame.columns
+    ]
 
     print(pt)
     final_configs = [
@@ -169,7 +182,7 @@ if __name__ == "__main__":
                     & (frame.lr == lr)
                     & (frame.generator == gene)
                     & (frame.dataset == db)
-                ][k+".mean"]
+                ][k + ".mean"]
             )
 
             stds.extend(
@@ -178,7 +191,7 @@ if __name__ == "__main__":
                     & (frame.lr == lr)
                     & (frame.generator == gene)
                     & (frame.dataset == db)
-                    ][k + ".std"]
+                ][k + ".std"]
             )
 
         all_series.append(series)
@@ -188,7 +201,7 @@ if __name__ == "__main__":
         # ["t5", "1e-4", "externalir", "tfidf"],
         # ["t5", "1e-4", "externalir", "dpr"],
         ["t5", "1e-4", "externalir2", "tfidf"],
-        ["t5", "1e-4", "externalir2", "dpr"]
+        ["t5", "1e-4", "externalir2", "dpr"],
     ]
     for model, lr, gene, retr in final_configs:
         print(model, lr, gene)
@@ -197,13 +210,15 @@ if __name__ == "__main__":
         for db in dbs:
             k = "all"
 
-            print(frame[
+            print(
+                frame[
                     (frame.model == model)
                     & (frame.lr == lr)
                     & (frame.generator == gene)
                     & (frame.retriever == retr)
                     & (frame.dataset == db)
-                    ])
+                ]
+            )
             series.extend(
                 frame[
                     (frame.model == model)
@@ -211,7 +226,7 @@ if __name__ == "__main__":
                     & (frame.generator == gene)
                     & (frame.retriever == retr)
                     & (frame.dataset == db)
-                ][k+".mean"]
+                ][k + ".mean"]
             )
 
             stds.extend(
@@ -221,7 +236,7 @@ if __name__ == "__main__":
                     & (frame.generator == gene)
                     & (frame.retriever == retr)
                     & (frame.dataset == db)
-                    ][k + ".std"]
+                ][k + ".std"]
             )
 
         if len(series) > 6:
@@ -231,17 +246,29 @@ if __name__ == "__main__":
             all_series.append(series)
             all_stds.append(stds)
 
-    for series,stds in zip(all_series, all_stds):
+    for series, stds in zip(all_series, all_stds):
         print(series)
         ax.plot(series)
-        ax.fill_between(range(len(series)),[min(1,s+i) for (s,i) in zip(series,stds)],[s-i for (s,i) in zip(series,stds)], alpha=0.4)
-
+        ax.fill_between(
+            range(len(series)),
+            [min(1, s + i) for (s, i) in zip(series, stds)],
+            [s - i for (s, i) in zip(series, stds)],
+            alpha=0.4,
+        )
 
     plt.xticks(range(len(dbs)), labels=[k.replace("v2.4_", "") for k in dbs])
     plt.xlabel("Number of facts in DB")
     plt.ylabel("Answer Accuracy")
-    plt.legend(["SPJ PerfectIR","SSG+SPJ","T5 + TF-IDF","T5 + DPR"]  # "T5 FiD", "TF-IDF", "DPR"])
-    , loc="lower left", fontsize="x-small")
+    plt.legend(
+        [
+            "SPJ PerfectIR",
+            "SSG+SPJ",
+            "T5 + TF-IDF",
+            "T5 + DPR",
+        ],  # "T5 FiD", "TF-IDF", "DPR"])
+        loc="lower left",
+        fontsize="x-small",
+    )
     # plt.tight_layout()
     # plt.show()
     plt.savefig("ssg_dbsize.pdf", bbox_inches="tight")

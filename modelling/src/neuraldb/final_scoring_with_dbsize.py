@@ -95,7 +95,9 @@ if __name__ == "__main__":
                     else 0
                 )
 
-    ndb_predictions = glob.glob("consolidated/work/v2.4_25/**/predictions.jsonl", recursive=True)
+    ndb_predictions = glob.glob(
+        "consolidated/work/v2.4_25/**/predictions.jsonl", recursive=True
+    )
     all_experiments = []
     for prediction in ndb_predictions:
 
@@ -131,12 +133,24 @@ if __name__ == "__main__":
 
     graph_keys = ["size_0", "size_1", "size_2-4", "size_5-9", "size_10-19"]
 
-    aggr = {"all_":[np.mean, np.std]}
-    aggr.update({k:[np.mean, np.std] for k in graph_keys})
+    aggr = {"all_": [np.mean, np.std]}
+    aggr.update({k: [np.mean, np.std] for k in graph_keys})
 
-    pt = pd.pivot_table(original_frame,index=["model","generator","lr", "steps"], aggfunc=aggr,fill_value=0)
+    pt = pd.pivot_table(
+        original_frame,
+        index=["model", "generator", "lr", "steps"],
+        aggfunc=aggr,
+        fill_value=0,
+    )
     frame = pd.DataFrame(pt.to_records())
-    frame.columns = [hdr.replace("('all_\', \'", "all.").replace("('size_","size_").replace(", ",".").replace(")", "").replace("\'","") for hdr in frame.columns]
+    frame.columns = [
+        hdr.replace("('all_', '", "all.")
+        .replace("('size_", "size_")
+        .replace(", ", ".")
+        .replace(")", "")
+        .replace("'", "")
+        for hdr in frame.columns
+    ]
 
     print(pt)
     final_configs = [
@@ -163,7 +177,7 @@ if __name__ == "__main__":
                     (frame.model == model)
                     & (frame.lr == lr)
                     & (frame.generator == gene)
-                ][k+".mean"]
+                ][k + ".mean"]
             )
 
             stds.extend(
@@ -171,7 +185,7 @@ if __name__ == "__main__":
                     (frame.model == model)
                     & (frame.lr == lr)
                     & (frame.generator == gene)
-                    ][k + ".std"]
+                ][k + ".std"]
             )
 
         all_series.append(series)
@@ -180,15 +194,21 @@ if __name__ == "__main__":
     all_series[0][0] = 1.0
     all_stds[0][0] = 0.0
 
-    for series,stds in zip(all_series, all_stds):
+    for series, stds in zip(all_series, all_stds):
         ax.plot(series)
-        ax.fill_between(range(len(series)),[min(1,s+i) for (s,i) in zip(series,stds)],[s-i for (s,i) in zip(series,stds)], alpha=0.4)
-
+        ax.fill_between(
+            range(len(series)),
+            [min(1, s + i) for (s, i) in zip(series, stds)],
+            [s - i for (s, i) in zip(series, stds)],
+            alpha=0.4,
+        )
 
     plt.xticks([0, 1, 2, 3, 4], labels=[k.replace("size_", "") for k in graph_keys])
     plt.xlabel("Number of support sets")
     plt.ylabel("Answer Accuracy")
-    plt.legend(["Neural SPJ", "T5", "Longformer", "FiD"],loc="lower left", fontsize="xxsmall")  # "T5 FiD", "TF-IDF", "DPR"])
+    plt.legend(
+        ["Neural SPJ", "T5", "Longformer", "FiD"], loc="lower left", fontsize="xxsmall"
+    )  # "T5 FiD", "TF-IDF", "DPR"])
     # plt.tight_layout()
     # plt.show()
     plt.savefig("by_dbsize.pdf", bbox_inches="tight")

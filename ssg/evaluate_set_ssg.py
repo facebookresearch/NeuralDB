@@ -47,18 +47,22 @@ def evaluate_ndb_with_ssg(data_file):
         # in some legacy versions we might have both [4,5] and [5,4] in the ssg output; we remove one.
         remove_lst = []
         for s in ssg_output:
-            if len(s) > 1 and [s[1], s[0]] in ssg_output and [s[1], s[0]] not in remove_lst:
+            if (
+                len(s) > 1
+                and [s[1], s[0]] in ssg_output
+                and [s[1], s[0]] not in remove_lst
+            ):
                 remove_lst.append(s)
         for r in remove_lst:
             ssg_output.remove(r)
 
         answer = d["answer"]
-        q_type = d["metadata"]['query_type']
+        q_type = d["metadata"]["query_type"]
 
-        if 'complex' in q_type:
-            q_type = 'join'
-        if 'arg' in q_type or 'min' in q_type or 'max' in q_type:
-            q_type = 'min/max'
+        if "complex" in q_type:
+            q_type = "join"
+        if "arg" in q_type or "min" in q_type or "max" in q_type:
+            q_type = "min/max"
         if q_type not in Ps_soft:
             P_soft = 0
             P_exact = 0
@@ -77,7 +81,7 @@ def evaluate_ndb_with_ssg(data_file):
         total_soft = 0
         total_exact = 0
 
-        ## precision
+        # precision
         if len(ssg_output) == 0:
             total_soft = 1
             total_exact = 1
@@ -105,7 +109,8 @@ def evaluate_ndb_with_ssg(data_file):
 
         total_exact = 0
         total_soft = 0
-        ## Recall
+
+        # Recall
         if len(gold_facts) == 0 or answer == "None":
             total_soft = 1
             total_exact = 1
@@ -133,7 +138,7 @@ def evaluate_ndb_with_ssg(data_file):
     total_c = 0
 
     for t in Ps_exact:
-        print(t + ':')
+        print(t + ":")
         print(Ps_exact[t] / C[t], Rs_exact[t] / C[t])
         print(Ps_soft[t] / C[t], Rs_soft[t] / C[t])
         total_c = total_c + C[t]
@@ -142,7 +147,7 @@ def evaluate_ndb_with_ssg(data_file):
         total_r_soft = total_r_soft + Rs_soft[t]
         total_p_soft = total_p_soft + Ps_soft[t]
 
-    print('total: ')
+    print("total: ")
     print(total_p_exact / total_c, total_r_exact / total_c)
     print(total_p_soft / total_c, total_r_soft / total_c)
 
@@ -154,11 +159,16 @@ def is_valid_file(parser, arg):
         return arg
 
 
-parser = argparse.ArgumentParser(description='ssg predictions evaluations')
-parser.add_argument("-i", dest="predictions_file", required=True,
-                    help="predictions file",
-                    type=lambda x: is_valid_file(parser, x))
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="ssg predictions evaluations")
+    parser.add_argument(
+        "-i",
+        dest="predictions_file",
+        required=True,
+        help="predictions file",
+        type=lambda x: is_valid_file(parser, x),
+    )
 
-args = parser.parse_args()
+    args = parser.parse_args()
 
-evaluate_ndb_with_ssg(args.predictions_file)
+    evaluate_ndb_with_ssg(args.predictions_file)

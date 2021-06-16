@@ -6,7 +6,6 @@ from neuraldb.dataset.instance_generator.instance_generator import InstanceGener
 logger = logging.getLogger(__name__)
 
 
-
 class ExternalIRGenerator(InstanceGenerator):
     def _process_query(self, query_obj, update_tokens):
         query_tokens = self.tokenizer.tokenize("Answer question: " + query_obj["query"])

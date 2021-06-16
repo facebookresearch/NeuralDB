@@ -80,7 +80,6 @@ if __name__ == "__main__":
     for db_idx, question_idx in added_instances:
         to_add[db_idx].append(question_idx)
 
-
     with open(args.in_file) as f, open(args.out_file, "w+") as of:
         for db_idx, line in tqdm(enumerate(f)):
             instance = json.loads(line)
@@ -92,10 +91,12 @@ if __name__ == "__main__":
 
                     q_bin = get_size_bin(question["facts"])
 
-
                     # Filter weaker argmin/argmaxes
-                    if question["type"] in {"argmin", "argmax", "min","max"}:
-                        if len(question["answer"]) > 2 or len(question["derivations"]) == 1:
+                    if question["type"] in {"argmin", "argmax", "min", "max"}:
+                        if (
+                            len(question["answer"]) > 2
+                            or len(question["derivations"]) == 1
+                        ):
                             if random.random() < 0.8:
                                 continue
                         else:
@@ -103,7 +104,7 @@ if __name__ == "__main__":
                                 continue
 
                     if question["type"] == "bool" and "TRUE" in question["answer"]:
-                        if random.random() < .4:
+                        if random.random() < 0.4:
                             continue
 
                     # Less than 8 facts
@@ -192,7 +193,6 @@ if __name__ == "__main__":
                     if "complex" in question["id"] or "join" in question["id"]:
                         complex_counts_types[question["type"]] += 1
                         complex_counts_facts[len(question["facts"])] += 1
-
 
                     instance["queries"].append(question)
             del instance["all_queries"]

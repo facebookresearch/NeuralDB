@@ -64,7 +64,8 @@ class NeuralSPJGenerator(InstanceGenerator):
             for fact_group in query_obj["predicted_facts"]:
                 context_tokens = [update_tokens[fact] for fact in set(fact_group)]
                 yield self.maybe_decorate_with_metadata(
-                    {"query": query_tokens, "context": context_tokens}, query_obj,
+                    {"query": query_tokens, "context": context_tokens},
+                    query_obj,
                 )
 
         # elif (

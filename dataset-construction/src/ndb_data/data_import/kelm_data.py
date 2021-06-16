@@ -1,25 +1,16 @@
-import os
 import json
 from argparse import ArgumentParser
-
-import pymongo
 from tqdm import tqdm
+
+from ndb_data.wikidata_common.kelm import KELMMongo
 
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("kelm_file")
     args = parser.parse_args()
 
-    user = os.getenv("MONGO_USER", "")
-    password = os.getenv("MONGO_PASSWORD", "")
-    host = os.getenv("MONGO_HOST", "localhost")
-    port = os.getenv("MONGO_PORT", "27017")
-    db = os.getenv("MONGO_DB", "wikidata")
-
-    client = pymongo.MongoClient(f"mongodb://{user}:{password}@{host}:{port}")
-
-    db = client["wikidata"]
-    collection = db["kelm"]
+    client = KELMMongo()
+    collection = client.collection
 
     batch = []
     insert_count = 0

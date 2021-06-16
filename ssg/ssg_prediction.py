@@ -16,114 +16,129 @@ def is_valid_folder(parser, arg):
         return arg
 
 
-parser = argparse.ArgumentParser(description='ssg predictions')
-parser.add_argument("-i", dest="folder", required=True,
-                    help="input data folder",
-                    type=lambda x: is_valid_folder(parser, x))
-parser.add_argument("-m", dest="model_path", required=True,
-                    help="model folder",
-                    type=lambda x: is_valid_folder(parser, x))
+if __name__ == "__main__":
 
-parser.add_argument("-th", dest="thresholds", type=float, nargs="+",
-                    help="thresholds", default=[0.8])
+    parser = argparse.ArgumentParser(description="ssg predictions")
+    parser.add_argument(
+        "-i",
+        dest="folder",
+        required=True,
+        help="input data folder",
+        type=lambda x: is_valid_folder(parser, x),
+    )
+    parser.add_argument(
+        "-m",
+        dest="model_path",
+        required=True,
+        help="model folder",
+        type=lambda x: is_valid_folder(parser, x),
+    )
 
-parser.add_argument("-b", dest="batch_size", type=int,
-                    help="batch size", default=100)
+    parser.add_argument(
+        "-th", dest="thresholds", type=float, nargs="+", help="thresholds", default=[0.8]
+    )
 
-parser.add_argument("-d", dest="device", default="cuda:0",
-                    help="output address")
+    parser.add_argument("-b", dest="batch_size", type=int, help="batch size", default=100)
 
-args = parser.parse_args()
+    parser.add_argument("-d", dest="device", default="cuda:0", help="output address")
 
-folder = args.folder
-batch_size = args.batch_size
+    args = parser.parse_args()
 
-model_path = args.model_path
-device = args.device
+    folder = args.folder
+    batch_size = args.batch_size
 
-model = SentenceTransformer(model_path, device=device)
+    model_path = args.model_path
+    device = args.device
 
-thresholds = args.thresholds
+    model = SentenceTransformer(model_path, device=device)
 
-names = ['dev', 'test']
+    thresholds = args.thresholds
 
-softmax = nn.Softmax()
-for threshold in thresholds:
-    for name in names:
-        data_file = folder + "/" + name + ".jsonl"
+    names = ["dev", "test"]
 
-        outfile = folder + "/" + name + "_" + str(threshold) + "_ssg_sup.json"
-        dataset = read_NDB(data_file)
-        ssg_data = []
+    softmax = nn.Softmax()
+    for threshold in thresholds:
+        for name in names:
+            data_file = folder + "/" + name + ".jsonl"
 
-        db_count = 0
-        for d in dataset:
+            outfile = folder + "/" + name + "_" + str(threshold) + "_ssg_sup.json"
+            dataset = read_NDB(data_file)
+            ssg_data = []
 
-            questions = d[1]
-            ctx = d[0]
+            db_count = 0
+            for d in dataset:
 
-            ctx.insert(0, '<eos>')
-            ctx_reps = model.encode(ctx)
-            q_count = 0
-            for q in questions:
+                questions = d[1]
+                ctx = d[0]
 
-                states = [[[-1, q['query']]]]
-                new_states = []
-                final_sets = []
-                a_reps = ctx_reps[0:q['height'] + 2]
+                ctx.insert(0, "<eos>")
+                ctx_reps = model.encode(ctx)
+                q_count = 0
+                for q in questions:
 
-                for t in range(2):
+                    states = [[[-1, q["query"]]]]
+                    new_states = []
+                    final_sets = []
+                    a_reps = ctx_reps[0: q["height"] + 2]
 
-                    while states:
-                        state = states.pop(0)
+                    for t in range(2):
 
-                        state_text = [s[1] for s in state]
-                        s_text = ["[SEP]".join(state_text)]
-                        s_reps = model.encode(s_text)
+                        while states:
+                            state = states.pop(0)
 
-                        cos_scores = util.pytorch_cos_sim(s_reps, a_reps)[0]
-                        cos_scores = cos_scores.cpu()
+                            state_text = [s[1] for s in state]
+                            s_text = ["[SEP]".join(state_text)]
+                            s_reps = model.encode(s_text)
 
-                        next_actions = np.nonzero(cos_scores > threshold).squeeze(1)
+                            cos_scores = util.pytorch_cos_sim(s_reps, a_reps)[0]
+                            cos_scores = cos_scores.cpu()
 
-                        next_actions = next_actions.tolist()
+                            next_actions = np.nonzero(cos_scores > threshold).squeeze(1)
 
-                        if not next_actions:
-                            st = state.copy()
-                            final_sets.append(st[1:])
+                            next_actions = next_actions.tolist()
 
-                        for a in next_actions:
-                            if a == 0:
+                            if not next_actions:
                                 st = state.copy()
                                 final_sets.append(st[1:])
-                            else:
-                                pre_acts = [pre_act[0] for pre_act in state[1:]]
-                                if (a - 1) not in pre_acts:
-                                    new_state = state.copy()
-                                    new_state.append([a - 1, ctx[a]])
-                                    new_states.append(new_state)
-                    states = new_states
-                    new_states = []
 
-                for s in states:
-                    st = s.copy()
-                    facts = st[1:]
-                    if facts not in final_sets and [facts[1], facts[0]] not in final_sets:
-                        final_sets.append(st[1:])
-                data = {}
-                data["db_id"] = db_count
-                data["question_id"] = q_count
-                data["query"] = q['query']
-                data["context_height"] = q['height']
-                data["gold_facts"] = q['facts']
-                data["answer"] = q['answer']
-                data["metadata"] = {"relation_type": q['relation'], "query_type": q['type']}
-                data["ssg_output"] = final_sets
+                            for a in next_actions:
+                                if a == 0:
+                                    st = state.copy()
+                                    final_sets.append(st[1:])
+                                else:
+                                    pre_acts = [pre_act[0] for pre_act in state[1:]]
+                                    if (a - 1) not in pre_acts:
+                                        new_state = state.copy()
+                                        new_state.append([a - 1, ctx[a]])
+                                        new_states.append(new_state)
+                        states = new_states
+                        new_states = []
 
-                ssg_data.append(data)
-                q_count = q_count + 1
+                    for s in states:
+                        st = s.copy()
+                        facts = st[1:]
+                        if (
+                            facts not in final_sets
+                            and [facts[1], facts[0]] not in final_sets
+                        ):
+                            final_sets.append(st[1:])
+                    data = {}
+                    data["db_id"] = db_count
+                    data["question_id"] = q_count
+                    data["query"] = q["query"]
+                    data["context_height"] = q["height"]
+                    data["gold_facts"] = q["facts"]
+                    data["answer"] = q["answer"]
+                    data["metadata"] = {
+                        "relation_type": q["relation"],
+                        "query_type": q["type"],
+                    }
+                    data["ssg_output"] = final_sets
 
-            db_count = db_count + 1
+                    ssg_data.append(data)
+                    q_count = q_count + 1
 
-        with open(outfile, 'w') as out_file:
-            json.dump(ssg_data, out_file)
+                db_count = db_count + 1
+
+            with open(outfile, "w") as out_file:
+                json.dump(ssg_data, out_file)
