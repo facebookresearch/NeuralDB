@@ -2,7 +2,7 @@
 
 This repository generates training instances for the NDB training dataset from templates over facts mapped from KELM.
 
-In some scripts, a the KELM and Wikidata graph are used. These assume that they have been loaded into a MongoDB database.
+In some scripts, the KELM mappings and Wikidata graph are used. These assume that they have been loaded into a MongoDB database.
 Set the following environment variables to point the scripts to the appropriate the database:
 
 
