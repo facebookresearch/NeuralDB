@@ -1,3 +1,4 @@
 pre-commit
 black
 flake8
+licenseheaders

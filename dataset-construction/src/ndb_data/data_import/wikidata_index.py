@@ -1,3 +1,21 @@
+#
+# Copyright (c) 2021 Facebook, Inc. and its affiliates.
+#
+# This file is part of NeuralDB.
+# See https://github.com/facebookresearch/NeuralDB for further info.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
 import bz2
 import json
 from collections import defaultdict
@@ -6,8 +24,9 @@ from json import JSONDecodeError
 import pydash
 from argparse import ArgumentParser
 
-import pymongo
 from tqdm import tqdm
+
+from ndb_data.wikidata_common.wikidata import Wikidata
 
 
 def read_dump(wikidata_file):
@@ -57,9 +76,8 @@ if __name__ == "__main__":
     parser.add_argument("wikidata_file")
     args = parser.parse_args()
 
-    client = pymongo.MongoClient("mongodb://jt:jt@127.0.0.1:27017")
-    db = client["wikidata"]
-    collection = db["wiki_graph"]
+    wiki = Wikidata()
+    collection = wiki.collection
 
     insert_count = 0
     dump = read_dump(args.wikidata_file)
@@ -87,4 +105,3 @@ if __name__ == "__main__":
 
     print("last")
     collection.insert_many(batch)
-    client.close()

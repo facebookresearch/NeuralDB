@@ -1,3 +1,21 @@
+#
+# Copyright (c) 2021 Facebook, Inc. and its affiliates.
+#
+# This file is part of NeuralDB.
+# See https://github.com/facebookresearch/NeuralDB for further info.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
 import json
 import random
 from collections import defaultdict
@@ -80,7 +98,6 @@ if __name__ == "__main__":
     for db_idx, question_idx in added_instances:
         to_add[db_idx].append(question_idx)
 
-
     with open(args.in_file) as f, open(args.out_file, "w+") as of:
         for db_idx, line in tqdm(enumerate(f)):
             instance = json.loads(line)
@@ -92,20 +109,20 @@ if __name__ == "__main__":
 
                     q_bin = get_size_bin(question["facts"])
 
-
                     # Filter weaker argmin/argmaxes
-                    if question["type"] in {"argmin", "argmax", "min","max"}:
-                        if len(question["answer"]) > 2 or len(question["derivations"]) == 1:
+                    if question["type"] in {"argmin", "argmax", "min", "max"}:
+                        if (
+                            len(question["answer"]) > 2
+                            or len(question["derivations"]) == 1
+                        ):
                             if random.random() < 0.95:
                                 continue
                         else:
                             if random.random() < 0.7:
                                 continue
 
-
-
                     if question["type"] == "bool" and "TRUE" in question["answer"]:
-                        if random.random() < .4:
+                        if random.random() < 0.4:
                             continue
 
                     # Less than 8 facts
@@ -144,7 +161,6 @@ if __name__ == "__main__":
                         # Drop 90% of the facts
                         if random.random() < 0.95:
                             continue
-
 
                     if q_bin < 4:
                         if random.random() < 0.6:
@@ -199,7 +215,6 @@ if __name__ == "__main__":
                     if "complex" in question["id"] or "join" in question["id"]:
                         complex_counts_types[question["type"]] += 1
                         complex_counts_facts[len(question["facts"])] += 1
-
 
                     instance["queries"].append(question)
             del instance["all_queries"]
