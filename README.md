@@ -8,7 +8,7 @@ to appear at ACL2021. Work is performed in collaboration with James Thorne, Maji
 
 
 ## Data
-The completed datasets for NeuralDBs can be downloaded from this [S3 bucket](#TODO) and is released under a [CC BY-SA 3.0 license](https://creativecommons.org/licenses/by-sa/2.0/).
+The completed datasets for NeuralDBs will be avialable soon and is released under a [CC BY-SA 3.0 license](https://creativecommons.org/licenses/by-sa/2.0/).
 
 
 The dataset includes entity names from Wikidata which are released under a [CC BY-SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/).
