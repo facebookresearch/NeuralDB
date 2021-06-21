@@ -48,7 +48,6 @@ from neuraldb.dataset.neuraldb_file_reader import NeuralDBFileReader
 from neuraldb.dataset.seq2seq_dataset import Seq2SeqDataset
 from neuraldb.evaluation.postprocess_baselines import get_baseline_evaluation
 from neuraldb.evaluation.postprocess_spj import get_spj_evaluation
-from neuraldb.modelling.fusion_in_decoder import T5MergeForConditionalGeneration
 from neuraldb.modelling.neuraldb_trainer import NeuralDBTrainer
 from neuraldb.util.log_helper import setup_logging
 
@@ -353,13 +352,6 @@ def main():
         model_args.model_name_or_path
     ] = data_args.max_source_length
 
-    use_fid = False
-    if "-fid" in model_args.model_name_or_path:
-        model_args.model_name_or_path = model_args.model_name_or_path.replace(
-            "-fid", ""
-        )
-        use_fid = True
-
     config_kwargs = {}
     if "t5" in model_args.model_name_or_path:
         config_kwargs.update({"n_positions": data_args.max_source_length})
@@ -385,10 +377,6 @@ def main():
         use_auth_token=True if model_args.use_auth_token else None,
     )
 
-    if use_fid:
-        AutoModelForSeq2SeqLM._model_mapping.update(
-            {type(config): T5MergeForConditionalGeneration}
-        )
 
     # Temporarily set max_target_length for training.
     max_target_length = data_args.max_target_length
@@ -415,7 +403,7 @@ def main():
         generators[split] = generator
         datasets[split] = Seq2SeqDataset(
             dataset_reader.read(path),
-            auto_pad=generator.encode if not use_fid else generator.fusion_encode,
+            auto_pad=generator.encode,
         )
 
     compute_metrics = evaluation_metrics(
@@ -424,7 +412,7 @@ def main():
         generators["validation"] if "validation" in generators else generators["test"],
     )
     model = AutoModelForSeq2SeqLM.from_pretrained(
-        model_args.model_name_or_path,  # + ("-fid" if use_fid else ""),
+        model_args.model_name_or_path,
         from_tf=bool(".ckpt" in model_args.model_name_or_path),
         config=config,
         cache_dir=model_args.cache_dir,
