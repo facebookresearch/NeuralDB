@@ -6,7 +6,6 @@ to appear at ACL2021. Work is performed in collaboration with James Thorne, Maji
 
 ![Overview Image](overview.png)
 
-The code in this repository is released under the [Apache 2.0 license](LICENSE)
 
 ## Data
 The completed datasets for NeuralDBs can be downloaded from this [S3 bucket](#TODO) and is released under a [CC BY-SA 3.0 license](https://creativecommons.org/licenses/by-sa/2.0/).
@@ -39,3 +38,7 @@ In the `dataset-construction` and `modelling` folders, the `src` folder should b
 ```
 export PYTHONPATH=src
 ```
+
+## License
+
+The code in this repository is released under the [Apache 2.0 license](LICENSE)
