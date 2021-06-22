@@ -8,8 +8,7 @@ to appear at ACL2021. Work is performed in collaboration with James Thorne, Maji
 
 
 ## Data
-The completed datasets for NeuralDBs will be avialable soon and is released under a [CC BY-SA 3.0 license](https://creativecommons.org/licenses/by-sa/2.0/).
-
+The completed NeuralDB datasets can be downloaded [here](https://dl.fbaipublicfiles.com/neuraldb/fb-data-WikiNLDB.zip) and are released under a [CC BY-SA 3.0 license](https://creativecommons.org/licenses/by-sa/2.0/). 
 
 The dataset includes entity names from Wikidata which are released under a [CC BY-SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/).
 This dataset includes sentences from the KELM corpus. KELM is released under the [CC BY-SA 2.0 license](https://creativecommons.org/licenses/by-sa/2.0/)
