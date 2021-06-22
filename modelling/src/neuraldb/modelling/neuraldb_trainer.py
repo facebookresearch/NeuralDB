@@ -16,6 +16,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+# Part of this file uses code that is available from the following URL: 
+# https://github.com/huggingface/transformers/blob/v4.6.1/src/transformers/trainer.py
+# This code bears the following license header and was modified to allow metadata to
+# to be passed through to the system scorer
+
+# Copyright 2020-present the HuggingFace Inc. team.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import collections
 from typing import (
     List,
