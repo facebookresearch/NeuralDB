@@ -1,6 +1,6 @@
 # Neural Database Training Dataset Generation from KELM
 
-This repository generates training instances for the NDB training dataset from templates over facts mapped from KELM.
+This repository generates training instances for the NDB training dataset from templates over facts mapped from KELM. 
 
 In some scripts, the KELM mappings and Wikidata graph are used. These assume that they have been loaded into a MongoDB database.
 Set the following environment variables to point the scripts to the appropriate the database:
@@ -16,9 +16,13 @@ MONGO_DB=
 
 ## 1. Load data into database
 
+
+_The method for restoring the mapping between facts in the KELM and Wikidata IDs should now be considered as deprecated as the authors of KELM have now released the original mapping data._
+
+
 ### 1.1 Wikidata
 Wikidata can be imported to the MongoDB using the `wikidata_index.py` script, however this takes a few days to unzip, import and index.
-The easiest option is to restore a dump of the mongo database instead:
+The easiest option is to restore a dump of the mongo database instead. The dump can be downloaded from [Google Drive](https://drive.google.com/file/d/1A3pwl3ZGR2QT-5IzMp_fV4g1Qlvbmtc7/view?usp=sharing) and is released under a CC BY-SA 3.0 license.
 
 ```
 mongorestore --archive --gzip < mongo_wikidata_dump.gz
