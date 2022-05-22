@@ -31,8 +31,6 @@ from nltk.tokenize.treebank import TreebankWordDetokenizer
 from similarity.normalized_levenshtein import NormalizedLevenshtein
 from tqdm import tqdm
 
-from ndb_data.util.log_helper import setup_logging
-
 detok = TreebankWordDetokenizer()
 
 logger = logging.getLogger(__name__)
@@ -71,7 +69,6 @@ def normalize_subject(subject_name, fact):
 
 
 if __name__ == "__main__":
-    setup_logging()
     parser = ArgumentParser()
     parser.add_argument("cache_dir")
     parser.add_argument("out_file")
